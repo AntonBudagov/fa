@@ -1,0 +1,138 @@
+mixin sectionThree
+  .sectionThree
+    .wrappContent
+      .sliderReclama.owl-carousel
+        - var x = 5;
+          - for (var i=1; i<=x; i++)
+              img(src="images/upload/slider/slide1.jpg", alt="")
+
+      .brendDefaultLine
+        .flexB
+          .briefInfo
+            i.icon.icon-timer
+            .desc
+              .title Быстрая доставка
+              .description Доставим в течении часа или подарим скидку 10%
+          .briefInfo
+            i.icon.icon-bag-like-plus
+            .desc
+              .title Интимность покупки
+              .description Все покупки доставляются в закрытых пакетах
+          .briefInfo
+            i.icon.icon-medal
+            .desc
+              .title Качественный сервис
+              .description К вашим услугам лучшие фармацевты
+
+
+  .personal
+    .wrappContent
+      h3 Наши специалисты
+      .presonalWrapp.flexB
+        .person
+          .wrappImg
+            img(src="images/upload/personal/person1.png", alt="Ходоркова Елена")
+            .telperson
+              span Задать Вопрос
+              span 220-45-17
+          .namePerson Ходоркова Елена
+
+        .person
+          .wrappImg
+            img(src="images/upload/personal/person2.png", alt="Иванова Анастасия")
+            .telperson
+              span Задать Вопрос
+              span 220-45-17
+          .namePerson Иванова Анастасия
+        .person
+          .wrappImg
+            img(src="images/upload/personal/person3.png", alt="Еремеева Алла")
+            .telperson
+              span Задать Вопрос
+              span 220-45-17
+          .namePerson Еремеева Алла
+        .person
+          .wrappImg
+            img(src="images/upload/personal/person4.png", alt="Фамилия Антонина")
+            .telperson
+              span Задать Вопрос
+              span 220-45-17
+          .namePerson Фамилия Антонина
+        .person
+          .wrappImg
+            img(src="images/upload/personal/person5.png", alt="Кравченко Анна")
+            .telperson
+              span Задать Вопрос
+              span 220-45-17
+          .namePerson Кравченко Анна
+
+      .showMore показать еще
+
+  .review
+    .wrappContent
+      h3 Отзывы клиентов
+      .wrappReview.flexB
+        .textRebiew
+          .headTextRebiew
+            .date 23.05.2017
+            - for (var i=1; i<=5; i++)
+              i.icon.icon-star
+          p Не могла купить в аптеках Пепсан-Р. Здесь - без проблем. Почти всегда все есть в наличии и цены нормальные. Даже иногда ниже , чем в других аптеках. Порекомендовала пользоваться услугами интернет-аптеки своим друзьям. Спасибо!!!
+        .textRebiew
+          .headTextRebiew
+            .date 23.05.2017
+            - for (var i=1; i<=5; i++)
+              i.icon.icon-star
+          p Не могла купить в аптеках Пепсан-Р. Здесь - без проблем. Почти всегда все есть в наличии и цены нормальные. Даже иногда ниже , чем в других аптеках. Порекомендовала пользоваться услугами интернет-аптеки своим друзьям. Спасибо!!!
+        .textRebiew
+          .headTextRebiew
+            .date 23.05.2017
+            - for (var i=1; i<=5; i++)
+              i.icon.icon-star
+          p Не могла купить в аптеках Пепсан-Р. Здесь - без проблем. Почти всегда все есть в наличии и цены нормальные. Даже иногда ниже , чем в других аптеках. Порекомендовала пользоваться услугами интернет-аптеки своим друзьям. Спасибо!!!
+        .textRebiew
+          .headTextRebiew
+            .date 23.05.2017
+            - for (var i=1; i<=5; i++)
+              i.icon.icon-star
+          p Не могла купить в аптеках Пепсан-Р. Здесь - без проблем. Почти всегда все есть в наличии и цены нормальные. Даже иногда ниже , чем в других аптеках. Порекомендовала пользоваться услугами интернет-аптеки своим друзьям. Спасибо!!!
+      .showMore показать еще
+
+  .newsPosts
+    .wrappContent.flexB
+      .news
+        h3 Новости
+        .newContet
+          .wrappImg
+            img(src="images/upload/newspost/new1.jpg", alt="")
+          .description
+            h5 Врачи рекомендуют: кефир необходимо пить зимой
+            p Если у вас нет противопоказаний к употреблению этого напитка, обязательно включите кефир в свой рацион зимой. Медики указывают на то, что кисломолочные продукты обладают целым рядом свойств, полезнейших для ослабленного организма.
+            a.readMore(href="#") Читать далее
+        .newContet
+          .wrappImg
+            img(src="images/upload/newspost/new1.jpg", alt="")
+          .description
+            h5 Врачи рекомендуют: кефир необходимо пить зимой
+            p Если у вас нет противопоказаний к употреблению этого напитка, обязательно включите кефир в свой рацион зимой. Медики указывают на то, что кисломолочные продукты обладают целым рядом свойств, полезнейших для ослабленного организма.
+            a.readMore(href="#") Читать далее
+      .posts
+        h3 Статьи
+        .newContet
+          .wrappImg
+            img(src="images/upload/newspost/post1.jpg", alt="")
+          .description
+            h5 Врачи рекомендуют: кефир необходимо пить зимой
+            p Если у вас нет противопоказаний к употреблению этого напитка, обязательно включите кефир в свой рацион зимой. Медики указывают на то, что кисломолочные продукты обладают целым рядом свойств, полезнейших для ослабленного организма.
+            a.readMore(href="#") Читать далее
+        .newContet
+          .wrappImg
+            img(src="images/upload/newspost/post1.jpg", alt="")
+          .description
+            h5 Врачи рекомендуют: кефир необходимо пить зимой
+            p Если у вас нет противопоказаний к употреблению этого напитка, обязательно включите кефир в свой рацион зимой. Медики указывают на то, что кисломолочные продукты обладают целым рядом свойств, полезнейших для ослабленного организма.
+            a.readMore(href="#") Читать далее
+
+
+
+

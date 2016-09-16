@@ -1,0 +1,37 @@
+//- mixins
+include ../includes/header
+include ../includes/menu
+include ../includes/sectionOne
+include ../includes/sectionTwo
+include ../includes/sectionThree
+//-
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(content='', name='keywords')
+    meta(content='', name='description')
+    meta(content='width=device-width' name='viewport')
+    meta(content='#fff', name='msapplication-TileColor')
+    meta(content='#fff', name='theme-color')
+    //- ========================================================================
+    //- Vendor css
+    //- ========================================================================
+    link(rel='stylesheet' href='lib/owl.carousel/dist/assets/owl.carousel.min.css')
+    //- ========================================================================
+    //- Main css
+    //- ========================================================================
+    link(rel='stylesheet' href='css/main.css')
+
+    block title
+
+  body
+    block content
+
+    //- Vendor js============================
+    script(type="text/javascript" src="lib/jquery/dist/jquery.min.js")
+    script(src="lib/owl.carousel/dist/owl.carousel.min.js")
+    script(src="lib/materialize/js/velocity.min.js")
+    script(src="lib/materialize/js/leanModal.js")
+    //- Main Js
+    script(src="js/main.js")

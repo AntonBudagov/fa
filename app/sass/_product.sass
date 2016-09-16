@@ -1,0 +1,84 @@
+.products
+  display: flex
+  // justify-content: space-between
+  flex-flow: wrap
+  padding-top: 38px
+  .product
+    position: relative
+    width: 230px
+    height: 440px
+    background-color: white
+    padding: 40px 20px 38px 20px
+    margin-bottom: 20px
+    margin-right: 20px
+    &:nth-child(5n)
+      margin-right: 0
+
+    .stickerNew
+      position: absolute
+      top: 10px
+      padding: 4px
+      height: 15px
+      background-color: #44d654
+      border-radius: 4px 3px 3px 4px
+      color: white
+      font-family: $defaultFont
+      font-size: 9px
+      font-weight: 600
+      text-transform: uppercase
+
+    .stickerStock
+      @extend .stickerNew
+      background-color: #febe10
+
+    .categoryName
+      color: #1f4ba5
+      font-family: $defaultFont
+      font-size: 13px
+      font-weight: 600
+      margin-bottom: 16px
+
+    .description
+      height: 32px
+      color: #222
+      font-family: $defaultFont
+      font-size: 15px
+      font-weight: 600
+      line-height: 18px
+      overflow: hidden
+      margin-bottom: 66px
+
+    .wrappImg
+      text-align: center
+      height: 185px
+      display: flex
+      justify-content: center
+      align-items: center
+      align-content: center
+
+    .priceGroup
+      display: flex
+      position: absolute
+      bottom: 38px
+      .newPrice
+        color: #009110
+        font-family: $defaultFont
+        font-size: 15px
+        font-weight: 600
+        margin: 0 17px 0 20px
+      .oldPrice
+        position: relative
+        height: 11px
+        color: #febe10
+        font-family: Roboto
+        font-size: 11px
+        font-weight: 700
+        display: inline-block
+        &:before
+          content: ''
+          height: 1px
+          top: 50%
+          left: 0
+          right: 0
+          background-color: grey
+          position: absolute

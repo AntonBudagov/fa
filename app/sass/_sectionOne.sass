@@ -1,0 +1,126 @@
+.sectionOne
+  min-height: 536px
+  width: 100%
+
+
+  .wrappPhoto
+    background-color: #f6f6f6
+    background-image: url(../images/upload/sectionOne/doctor_w_1.png)
+    background-repeat: no-repeat
+    // padding-bottom: 100%
+    background-position: 170px bottom
+
+  .infoSectionOne
+    padding-top: 77px
+    display: flex
+    flex-direction: column
+    align-content: flex-end
+    align-items: flex-start
+    padding-bottom: 40px
+    margin-left: 630px
+    .date
+      width: 156px;
+      height: 14px;
+      color: #686868;
+      font-family: $defaultFont;
+      font-size: 15px;
+      font-weight: 400;
+      text-transform: uppercase
+    .actionText
+      margin-top: 31px
+      width: 350px;
+      height: 34px;
+      color: #1f4ba5;
+      font-family: $defaultFont;
+      font-size: 36px;
+      font-weight: 700;
+    .nameProduct
+      margin-top: 13px
+      width: 312px;
+      height: 32px;
+      color: #febe10;
+      font-family: $defaultFont;
+      font-size: 36px;
+      font-weight: 700;
+    .desc
+      margin-top: 29px
+      margin-bottom: 50px
+      width: 267px;
+      height: 15px;
+      color: #686868;
+      font-family: $defaultFont;
+      font-size: 15px;
+      font-weight: 400;
+
+
+  .groupCard
+    margin: 0 auto
+    display: flex
+    max-width: 1089px
+    justify-content: space-between
+
+    .card
+      display: flex
+      width: 320px;
+      height: 125px;
+      background-color: white;
+      border-radius: 2px;
+      box-shadow: -6.6px 6.1px 24px rgba(64, 63, 68, 0.52)
+      padding: 5px 13px 2px
+      margin-bottom: 39px
+      .wrappImg
+        margin-right: 24px
+
+      .date
+        color: #686868;
+        font-family: $defaultFont;
+        font-size: 11px;
+        font-weight: 400;
+        text-transform: uppercase
+        padding-bottom: 22px
+        padding-top: 9px
+      .desc
+        text-decoration: none
+        color: #1f4ba5;
+        font-family: $defaultFont;
+        font-size: 15px;
+        font-weight: 400;
+        max-width: 145px
+        display: block
+
+      &:nth-child(1)
+        .wrappImg
+          margin-right: 51px
+      &:nth-child(2)
+        .wrappImg
+          margin-right: 24px
+      &:nth-child(3)
+        .wrappImg
+          margin-left: 12px
+          margin-right: 39px
+
+  .brendLineYellow
+    display: flex
+    align-items: center
+    height: 87px;
+    background-color: #febe10
+    width: 100%
+    .briefInfo
+      display: flex
+      align-content: center
+      align-items: center
+      .icon-plus
+        +sprite($plus)
+      .icon-clock-2
+        +sprite($clock-2)
+      .icon-sert
+        +sprite($sert)
+      .icon-medical
+        +sprite($medical)
+
+      span
+        color: black
+        font-family: $defaultFont
+        font-size: 17px
+        font-weight: 400
+        margin-left: 22px

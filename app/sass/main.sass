@@ -1,0 +1,150 @@
+@import variables
+
+*
+  outline: none
+  box-sizing: border-box
+  &:before
+    box-sizing: border-box
+
+html
+  width: 100%
+  height: 100%
+  font-size: 18px
+  font-family: $defaultFont
+  color: $defaultColor
+  font-weight: 400
+  word-wrap: break-word
+  overflow-wrap: break-word
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+
+body
+  width: 100%
+  height: 100%
+  font-family: inherit
+  color: inherit
+  min-height: 100%
+  height: auto
+  max-width: 100%
+  background-color: #f6f6f6
+  overflow-y: auto
+  overflow-x: hidden
+
+h1
+  color: white
+  font-size: 34px
+  font-weight: 500
+
+h3
+  color: #222;
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+
+h4
+  color: white
+  font-size: 18px
+  font-weight: 500
+  font-family: $brendFont
+
+p
+  font-size: 18px
+  font-weight: 400
+  line-height: normal
+img
+  max-width: 100%
+  height: auto
+  -ms-interpolation-mode: bicubic
+  display: inline-block
+  vertical-align: middle
+
+iframe
+    width: 100%
+    height: 100%
+a
+  &:visited
+    color: inherit
+
+input, textarea
+  border: none
+  width: 100%
+  // height: 50px
+  // border-bottom: solid 1px #e1e1e1
+  // width: 205px
+  // font-size: 16px
+
+textarea
+  color: #909090
+
+input.error
+  border-bottom: solid 2px #ee6e73
+
+input::-webkit-input-placeholder
+  font-family: $defaultFont
+  color: #909090
+  font-size: 16px
+  font-weight: 400
+  // line-height: 50px
+
+input::-moz-placeholder
+  font-family: $defaultFont
+  color: #909090
+  font-size: 16px
+  font-weight: 400
+  // line-height: 50px
+input:-moz-placeholder
+  font-family: $defaultFont
+  color: #909090
+  font-size: 16px
+  font-weight: 400
+  // line-height: 50px
+input:-ms-input-placeholder
+  color: #909090
+  font-family: $defaultFont
+  font-size: 16px
+  line-height: 50px
+  font-weight: 400
+
+.flexB
+  display: flex
+  align-items: center
+  justify-content: space-around
+  flex-wrap: wrap
+  width: 100%
+
+.wrappContent
+  margin: 0 auto
+  max-width: 1231px
+
+svg
+  display: inline-block
+  width: 2rem
+  height: 2rem
+  overflow: visible
+
+
+
+@import _spritePng
+// @import _sprite
+@import _header
+@import _menu
+
+@import _carusels
+
+@import _buttons
+@import _product
+
+@import _sectionOne
+@import _sectionTwo
+@import _sectionThree
+
+
+.icon
+  position: relative
+  &:before
+    position: absolute
+    top: 0
+    left: 0
+    content: ''

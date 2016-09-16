@@ -1,0 +1,23 @@
+{
+  "name": "farmia",
+  "description": "use this for development LP",
+  "main": "index.js",
+  "authors": [
+    "Serokruluy"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "owl.carousel": "2.1.6",
+    "materialize": "^0.97.7"
+  }
+}

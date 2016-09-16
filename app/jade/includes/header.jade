@@ -1,0 +1,37 @@
+mixin header
+  header.header
+    .top
+      .wrappContent.flexB
+
+        .leftTop
+          a.dropDownCity
+            .icon.icon-pin
+            | Воронеж
+            i.icon.icon-arrow-dwon
+
+          a.link(href="") Самовывоз
+          a.link(href="") Доставка
+
+        .rightTop
+          a.phone(href="tel:88007654556") 8 (800) 765 45 56
+          a.link(href="") Заказать звонок
+
+    .middle
+      .wrappContent.flexB
+
+        a.logo(href="#")
+          img(src="images/logo.jpg", alt="Фармия")
+
+        form.navbar-form(role='search')
+          input#search(type='text', placeholder='Введите название лекарства (поиск по 30 000 товарам)', name='search')
+          .input-group-btn
+            button.btn.btnSearch(type='submit')
+              i.icon.icon-search
+              span найти
+
+        .btn.btnCart
+          i.icon.icon-cart
+          span корзина
+
+  .bottom
+    +menu
