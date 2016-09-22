@@ -1,0 +1,118 @@
+.footer
+  border-top: solid 1px #44d654
+  padding-top: 60px
+
+  .wrappFooter
+    display: flex
+    justify-content: flex-start
+  .menuFooter
+    padding-bottom: 57px
+    display: flex
+
+    li
+      color: #222
+      font-family: $defaultFont
+      font-size: 15px
+      font-weight: 600
+      line-height: 18px
+      padding-bottom: 6px
+      &:first-child
+        padding-bottom: 21px
+      a
+        color: #1f4ba5;
+        font-family: $defaultFont
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none
+        letter-spacing: 1px
+        &:hover
+          text-decoration: underline
+    ul
+
+      &:nth-child(2)
+        margin: 0 169px 0 106px
+  .copyright
+
+    color: #6d737b;
+    font-family: $defaultFont;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+    height: 60px;
+    background-color: #f6f6f6
+    border-top: solid 1px #ebebeb
+    padding-top: 20px
+    letter-spacing: 1px
+
+    .flexB
+      justify-content: space-between
+
+    .brend
+      color: #febe10;
+      line-height: 24px;
+      span
+        &:first-child
+          font-family: HelveticaNeueCyr;
+          font-size: 20px;
+          font-weight: 900;
+        &:last-child
+          font-family: GeometricSlab703BT;
+          font-size: 18px;
+          font-weight: 500;
+          font-style: italic;
+
+
+  .contact
+
+    .phoneFooter
+      color: #222;
+      font-family: $defaultFont;
+      font-size: 24px
+      font-weight: 700
+      line-height: 18px
+      text-decoration: none
+      margin: 30px 0 41px
+      display: block
+      letter-spacing: 1px
+      white-space: nowrap
+
+    .address
+      p
+
+        color: #222;
+        font-family: $defaultFont;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 18px;
+
+
+.social
+  max-width: 177px
+  margin: 0 72px 0 108px
+  h5
+    color: #222;
+    font-family: $defaultFont;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    padding-bottom: 27px
+
+  .flexB
+    justify-content: space-between
+
+
+  .icon
+    display: block
+    margin-bottom: 21px
+.icon-vk
+  +sprite($vk-social-logotype)
+.icon-fb
+  +sprite($facebook-logo-button)
+.icon-youtube
+  +sprite($youtube-logotype)
+.icon-instagram
+  +sprite($instagram-logo)
+.icon-ok
+  +sprite($odnoklassniki-logo)
+.icon-tw
+  +sprite($twitter-logo-button)

@@ -37,17 +37,25 @@ h1
   font-weight: 500
 
 h3
-  color: #222;
-  font-family: Roboto;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 36px;
+  color: #222
+  font-family: $Roboto
+  font-size: 30px
+  font-weight: 400
+  line-height: 36px
+  letter-spacing: 1px
 
 h4
   color: white
   font-size: 18px
   font-weight: 500
   font-family: $brendFont
+
+h5
+  color: #222
+  font-family: $defaultFont
+  font-size: 15px
+  font-weight: 600
+  line-height: 18px
 
 p
   font-size: 18px
@@ -63,13 +71,15 @@ img
 iframe
     width: 100%
     height: 100%
-a
-  &:visited
-    color: inherit
+// a
+//   &:visited
+//     color: inherit
 
 input, textarea
   border: none
   width: 100%
+  font-size: 15px
+  font-family: $defaultFont
   // height: 50px
   // border-bottom: solid 1px #e1e1e1
   // width: 205px
@@ -84,27 +94,27 @@ input.error
 input::-webkit-input-placeholder
   font-family: $defaultFont
   color: #909090
-  font-size: 16px
+  font-size: 15px
   font-weight: 400
+
   // line-height: 50px
 
 input::-moz-placeholder
   font-family: $defaultFont
   color: #909090
-  font-size: 16px
+  font-size: 15px
   font-weight: 400
   // line-height: 50px
 input:-moz-placeholder
   font-family: $defaultFont
   color: #909090
-  font-size: 16px
+  font-size: 15px
   font-weight: 400
   // line-height: 50px
 input:-ms-input-placeholder
   color: #909090
   font-family: $defaultFont
-  font-size: 16px
-  line-height: 50px
+  font-size: 15px
   font-weight: 400
 
 .flexB
@@ -117,6 +127,9 @@ input:-ms-input-placeholder
 .wrappContent
   margin: 0 auto
   max-width: 1231px
+  padding: 0 20px
+  @media #{$medium}
+    padding: 0
 
 svg
   display: inline-block
@@ -124,15 +137,42 @@ svg
   height: 2rem
   overflow: visible
 
+.error
+  color: #F44336
+  transition: .2s opacity ease-out, .2s color ease-out
+  // padding: 5px
+  font-size: 14px
+  position: absolute
+  display: none
+  &.active
+    display: block
 
+
+.overlayDropDown
+  position: fixed
+  display: none
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: transparent
+  z-index: 111
+  // opacity: 0
+  &.active
+    display: block
 
 @import _spritePng
+//fix hove
+// @import vendors/_mixin
 // @import _sprite
 @import _header
 @import _menu
 
-@import _carusels
+@import _modal
 
+
+@import _carusels
+@import _smallPopupCart
 @import _buttons
 @import _product
 
@@ -140,6 +180,7 @@ svg
 @import _sectionTwo
 @import _sectionThree
 
+@import _footer
 
 .icon
   position: relative

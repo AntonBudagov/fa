@@ -1,0 +1,127 @@
+.smallPopupCart, .smallPopupCartScrool
+  display: none
+  position: absolute
+  width: 257px
+  height: auto
+  background-color: rgba(0, 0, 0, 0.6)
+  top: 21px
+  right: 0
+  text-transform: none
+  z-index: 112
+  .wrappSmallPopupCart
+    padding: 0 10px
+    display: flex
+    align-items: center
+  .topSmallPopupCart
+    height: 30px
+    background-color: rgba(0, 0, 0, 0.6)
+    display: flex
+    align-items: center
+    .textSmallPopupCart
+      color: white
+      font-family: $brendFontBold
+      font-size: 15px
+      margin-right: 13px
+
+    .count
+      padding: 0 3px
+      width: auto
+      min-width: 20px
+      height: 20px
+      background-color: #44d654
+      border-radius: 10px
+      color: white
+      font-family: $Roboto
+      font-size: 13px
+      font-weight: 400
+      line-height: 20px
+      text-align: center
+
+  .contentSmallPopupCart
+    display: flex
+    margin-top: 10px
+    margin-bottom: 10px
+    .wrappImg
+      width: 30px
+      height: 30px
+      background-color: white
+      text-align: center
+      margin-right: 10px
+      img
+        height: 100%
+        margin: 0 auto
+    .desc
+      width: 170px
+      +text-overflow
+    span
+      font-family: $brendFontBold
+      font-size: 13px
+      font-weight: 400
+      line-height: 18px
+    .name
+      color: #fff
+    .price
+      display: block
+      color: #44d654
+
+  .linkSmallPopupCart
+    margin: 0 auto
+    display: block
+    text-align: center
+    color: #b8b8b8;
+    font-family: $brendFontBold
+    font-size: 13px
+    font-weight: 400
+    line-height: 18px
+    text-decoration: underline
+    margin-bottom: 10px
+
+.smallPopupCartScrool
+  width: 272px;
+  height: 292px;
+  background-color: white;
+  box-shadow: 0 0 4px rgba(17, 16, 16, 0.1)
+  right: 0
+  top: 81px
+  #wrappScroll
+    // overflow: hidden
+    // height: 184px
+  .contentSmallPopupCart
+
+
+    .name
+      color: #222
+
+
+
+  .footerSmallPopupCartScrool
+    position: absolute
+    bottom: 0
+    width: 100%
+    height: 108px;
+    background-color: #fff
+    padding: 17px 40px 0 41px
+
+  .catBtn, .checkoutBtn
+    width: 100%
+
+  .catBtn
+    margin-bottom: 10px
+
+  .checkoutBtn
+    border: 1px solid #44d654
+
+  .wrappScroll
+    //
+
+  .delete
+    cursor: pointer
+    margin-left: 10px
+    display: block
+    // width: 10px
+    // height: 10px
+    // background-color: #44d654;
+    .icon-close
+      display: block
+      +sprite($close-green)
+

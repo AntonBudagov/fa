@@ -1,18 +1,25 @@
 .header
+
   .top
-    height: 32px
+    min-height: 80px
     background-color: #777
     width: 100%
     display: flex
     align-items: center
 
+    .flexB
+      justify-content: space-between
+      position: relative
     .leftTop
       max-width: 345px
-      width: 100%
+      width: 50%
       display: flex
-      justify-content: space-between
+      justify-content: flex-start
+      margin-bottom: 5px
+
       a
         font-size: 15px
+        margin-right: 10px
       .dropDownCity
         cursor: pointer
         display: flex
@@ -23,14 +30,52 @@
         .icon-arrow-dwon
           +sprite($arrow-dwon)
           margin-left: 10px
+        &.active
+          .icon-arrow-dwon
+            transform: rotate(180deg)
+      .wrappDropDown
+        display: none
+        padding: 15px 20px 19px 20px
+        max-width: 494px
+        min-height: 207px
+        width: 100%
+        z-index: 112
+        background-color: white;
+        box-shadow: 0 0 4px rgba(17, 16, 16, 0.1);
+        position: absolute
+        top: 64px
+        left: 0
+
+      .contentDropDown
+        margin-top: 8px
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        .group
+          width: 108px
+        a
+
+          display: block
+
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 18px;
+          color: #151f2f;
+          transition: color .35s
+          &:hover
+            color: #1f4ba5;
+          &.active
+            color: #1f4ba5;
 
     .rightTop
+      width: 100%
+      text-align: right
       a
         font-size: 16px
         font-weight: 700
+        display: block
+        letter-spacing: 2px
 
-      .phone
-        margin-right: 25px
 
   .middle
     min-height: 98px
@@ -38,29 +83,35 @@
     background-color: #fff
     width: 100%
     display: flex
+
     // justify-content: flex
 
     .flexB
-
+      padding: 0 20px
       align-items: center
       align-content: center
-      padding: 21px 0 7px 0
+      justify-content: flex-start
+      position: relative
     .logo
-
-      margin-right: 87px
-    .navbar-form
+      //
+    .navbar-form-search
+      flex: 1 380px
+      position: relative
       max-width: 636px
       width: 100%
       display: flex
-      margin-right: 89px
-
+      margin: 20px 0
       #search
+        flex: 1 280px
         padding-left: 11px
-        width: 543px
+        max-width: 543px
         height: 32px
         border-top: 1px solid #febe10
         border-bottom: 1px solid #febe10
         border-left: 1px solid #febe10
+
+    .btnCart
+      margin: 20px 0
 
   a
     color: #fff
@@ -69,5 +120,91 @@
     font-size: 15px;
     font-weight: 400;
 
+  // search Content
+  .searchContent
+    display: none
+    position: absolute
+    width: 542px;
+    height: 275px;
+    background-color: white;
+    box-shadow: 0 0 4px rgba(17, 16, 16, 0.1)
+    top: 36px
+    padding: 10px 9px
+    .wrpappSearchContent
+      height: 100%
+    .scrollSeacrh
+      max-height: 134px
+      min-height: 44px
+      height: 100%
+    .title
+      width: 100%
+      border-bottom: solid 1px #44d654
+      color: #777
+      font-family: $defaultFont
+      font-size: 13px
+      font-weight: 600
+      line-height: 18px
+      padding-bottom: 2px
+    .nameSerch
+      display: flex
+      justify-content: space-between
+    .nameProduct, .priceProduct, span
+      color: #222
+      font-family: $defaultFont;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 18px;
+      margin-bottom: 3px;
+      letter-spacing: .5px;
+      margin-top: 10px;
+      text-align: left
+      &:first-child
+        margin-top: 10px
+
+
+    .priceProduct
+      text-align: right
+  .middle
+    &.fixed
+      position: fixed
+      z-index: 111
+      top: 0
   .bottom
     background-color: #fff
+
+
+@media #{$medium}
+  .header
+    .top
+      min-height: 32px
+      height: 32px
+      .leftTop
+        max-width: 345px
+        align-items: center
+        margin-bottom: 5px
+        a
+          margin-right: 44px
+        .wrappDropDown
+          top: 32px
+          left: 0
+      .rightTop
+        width: 50%
+        a
+          display: inline
+        .phone
+          margin-right: 17px
+
+    .middle
+      .logo
+        margin-right: 62px
+      .flexB
+        padding: 21px 0 7px 0
+
+      .navbar-form-search
+        margin-right: 89px
+        margin-bottom: 0
+
+      .btnCart
+        margin: 0
+
+

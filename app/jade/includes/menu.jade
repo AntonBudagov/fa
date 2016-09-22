@@ -1,3 +1,26 @@
+mixin ul
+  ul
+    li
+      a(href="#") Лечение заболеваний дыхательной системы
+    li
+      a(href="#") Лечение алкоголизма, наркомании, табакокурения
+    li
+      a(href="#") Настойки и экстракты
+    li
+      a(href="#") Лечение заболеваний ЖКТ и печени
+    li
+      a(href="#") Лекарства для борьбы с ВИЧ-инфекциями
+    li
+      a(href="#") Лечение заболеваний опорно-двигательного аппарата
+    li
+      a(href="#") Противомикробные средства
+    li
+      a(href="#") Лечение гормональных расстройств
+    li
+      a(href="#") Витамины и антиоксиданты
+    li
+      a(href="#") Витамины и антиоксиданты
+
 mixin menu
 
   nav.menu
@@ -5,6 +28,36 @@ mixin menu
       a.dropDown
         span Каталог товаров
         i.iocn.icon-arrow-down-black
+      .catalogProductsMenu
+        .wrappContent
+          ul
+            li.has-sub
+              a(href='#')
+                span Лекарства и БАДы
+                i.iocn.icon-arrow-right
+              .wrapp-ul
+                +ul
+                +ul
+                +ul
+            li
+              a(href="#") Гигиена
+            li.has-sub
+              a(href='#')
+                span  Мама и малыш
+                i.iocn.icon-arrow-right
+              .wrapp-ul
+                  +ul
+                  +ul
+                  +ul
+            li
+              a(href="") Мед.приборы и изделия
+            li
+              a(href="") Спорт и фитнес
+            li
+              a(href="") Косметика
+            li
+              a(href="") Линзы
+
       a.link(href="#") О компании
       a.link(href="#") Поможем детям
       a.link(href="#") Арендодетелям

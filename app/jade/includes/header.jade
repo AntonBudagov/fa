@@ -4,17 +4,46 @@ mixin header
       .wrappContent.flexB
 
         .leftTop
-          a.dropDownCity
+          a.dropDownCity#dropDownCity
             .icon.icon-pin
             | Воронеж
             i.icon.icon-arrow-dwon
-
-          a.link(href="") Самовывоз
-          a.link(href="") Доставка
+          .wrappDropDown
+            h5 Выберите ваш город
+            .contentDropDown
+              .group
+                a(href="#") Москва
+                a(href="#") Санкт-Петербург
+                a(href="#") Брянск
+                a(href="#") Владивосток
+                a(href="#") Владимир
+                a(href="#") Волгоград
+                a(href="#") Вологда
+                a.active(href="#") Воронеж
+              .group
+                a(href="#") Москва
+                a(href="#") Санкт-Петербург
+                a(href="#") Брянск
+                a(href="#") Владивосток
+                a(href="#") Владимир
+                a(href="#") Волгоград
+                a(href="#") Вологда
+                a(href="#") Воронеж
+              .group
+                a(href="#") Москва
+                a(href="#") Санкт-Петербург
+                a(href="#") Брянск
+                a(href="#") Владивосток
+                a(href="#") Владимир
+                a(href="#") Волгоград
+                a(href="#") Вологда
+                a(href="#") Воронеж
+          a.linkTop(href="#") Самовывоз
+          a.linkTop(href="#") Доставка
 
         .rightTop
           a.phone(href="tel:88007654556") 8 (800) 765 45 56
-          a.link(href="") Заказать звонок
+          a.link.modal-trigger(href="#modal1") Заказать звонок
 
     .middle
       .wrappContent.flexB
@@ -22,16 +51,187 @@ mixin header
         a.logo(href="#")
           img(src="images/logo.jpg", alt="Фармия")
 
-        form.navbar-form(role='search')
+        form.navbar-form-search(role='search')
           input#search(type='text', placeholder='Введите название лекарства (поиск по 30 000 товарам)', name='search')
-          .input-group-btn
-            button.btn.btnSearch(type='submit')
+          button.btn.btnSearch(type='submit')
+            .group-btn
               i.icon.icon-search
               span найти
+          .searchContent
+            .wrpappSearchContent
+              .title Товары
+              .scrollSeacrh.simplebar
+                .nameSerch
+                  span Анальгин таблетки 500 мг, 10 шт.
+                  span 1456.69 руб.
+                .nameSerch
+                  span Анальгин таблетки 500 мг, 10 шт.
+                  span 1456.69 руб.
+                .nameSerch
+                  span Анальгин таблетки 500 мг, 10 шт.
+                  span 1456.69 руб.
+                .nameSerch
+                  span Анальгин таблетки 500 мг, 10 шт.
+                  span 1456.69 руб.
+                .nameSerch
+                  span Анальгин таблетки 500 мг, 10 шт.
+                  span 1456.69 руб.
+              .title Статьи
+              .scrollSeacrh.simplebar
+                .nameSerch
+                  span Название статьи бла бла бла
+                .nameSerch
+                  span Название другой статьи бла бла бла бла
 
+
+        .btn.loginBtn.modal-trigger(href="#modal2") войти
         .btn.btnCart
           i.icon.icon-cart
           span корзина
+          //- Small Scroll
+        .smallPopupCartScrool
+          #wrappScroll.simplebar
+            .contentSmallPopupCart
+              .wrappSmallPopupCart
+                .wrappImg
+                  img(src="images/upload/products/p3.png", alt="")
+                .desc
+                  span.name Синафлан линимент 0,025%
+                  span.price 192 руб.
+                .delete
+                  i.icon.icon-close
+            .contentSmallPopupCart
+              .wrappSmallPopupCart
+                .wrappImg
+                  img(src="images/upload/products/p3.png", alt="")
+                .desc
+                  span.name Синафлан линимент 0,025%
+                  span.price 192 руб.
+                .delete
+                  i.icon.icon-close
+            .contentSmallPopupCart
+              .wrappSmallPopupCart
+                .wrappImg
+                  img(src="images/upload/products/p3.png", alt="")
+                .desc
+                  span.name Синафлан линимент 0,025%
+                  span.price 192 руб.
+                .delete
+                  i.icon.icon-close
+            .contentSmallPopupCart
+              .wrappSmallPopupCart
+                .wrappImg
+                  img(src="images/upload/products/p3.png", alt="")
+                .desc
+                  span.name Синафлан линимент 0,025%
+                  span.price 192 руб.
+                .delete
+                  i.icon.icon-close
+          .footerSmallPopupCartScrool
+            .btn.catBtn перейти в корзину
+            .btn.checkoutBtn Оформить заказ
+        .smallPopupCart
+          .topSmallPopupCart
+            .wrappSmallPopupCart
+              .textSmallPopupCart Добавлено в корзину
+              .count 12
+          .contentSmallPopupCart
+            .wrappSmallPopupCart
+              .wrappImg
+                img(src="images/upload/products/p3.png", alt="")
+              .desc
+                span.name Синафлан линимент 0,025%
+                span.price 192 руб.
+          a.linkSmallPopupCart(href="#") посмотреть корзину
 
-  .bottom
-    +menu
+
+
+
+    .bottom
+      +menu
+
+  //- Modal CallBack
+  #modal1.modal.modalCallBack
+    .modal-close
+      i.icon.icon-cancel
+    .modal-content
+      h4 Заказать звонок
+      .inputWrapp
+        .error Не указанно имя!
+        input(type="text" placeholder="Ваше имя" name="name")
+      .inputWrapp
+        .error.active Не указан телефон!
+        input.error-input(type="tel" placeholder="Телефон" name="tel")
+      input.btn(type="submit")
+
+  //- Modal modalLoginForm
+  #modal2.modal.modalLoginForm
+    .modal-close
+      i.icon.icon-cancel
+    .modal-content
+      .btnGroup.authorization
+        .btn
+          i.icon.icon-login
+          span Вход на сайт
+        .btn.active
+          i.icon.icon-register
+          span РЕГИСТРАЦИЯ
+      .leftModalContent.registration.active
+
+        h4 Регистрация на сайте
+        .inputWrapp
+          .error Не указанно имя!
+          input(type="text" placeholder="Ваше имя" name="name")
+        .inputWrapp
+          .error.active Не указан телефон!
+          input.error-input(type="tel" placeholder="Телефон" name="tel")
+        .inputWrapp
+          .error.active Не указан email!
+          input.error-input(type="email" placeholder="Email" name="email")
+        .inputWrapp
+          .error пароль слишком короткий!
+          input.error-input(type="password" placeholder="Пароль" name="pwd")
+
+        .checkedGroup
+          input#checkedMaster(type="checkbox" checked)
+          label(for="checkedMaster") Я специалист
+          .qw ?
+
+        .inputWrapp
+          .error пароль слишком короткий!
+          input(type="text" placeholder="Пин-код специалиста" name="pinkod")
+
+        .footerModal
+          input.btn.registerBtn(type="submit" value="РЕГИСТРАЦИЯ")
+          .infoText
+            p Регистрируясь, вы соглашаетесь с
+            a(href="#") Политикой конфиденциальности
+      .leftModalContent.sigin
+        h4 Авторизация на сайте
+        .inputWrapp
+          lable.brendLable Email или телефон
+          .error Не указанно имя!
+          input(type="text" placeholder="+7" name="name")
+        .inputWrapp
+          lable.brendLable Пароль
+          .error пароль слишком короткий!
+          input(type="password" placeholder="Пароль" name="pwd")
+        a.link.fogotPassword(href="#") Забыли пароль?
+
+        input.btn.loginBtn(type="submit" value="войти")
+
+
+      .rightModalContent
+        h4 Почему стоит пройти регистрацию:
+        .infoGroup.flexB
+          i.icon.icon-procent
+          .desc Доступ к бонусной программе и накопительным скидкам
+        .infoGroup.flexB
+          i.icon.icon-present-white
+          .desc Специальные предложения в праздники и подарки
+        .infoGroup.flexB
+          i.icon.icon-hand-pointer
+          .desc Оформление повторного заказа в 1 клик
+        .infoGroup.flexB
+          i.icon.rocket-ship
+          .desc Быстрое оформление заказа

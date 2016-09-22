@@ -1,0 +1,253 @@
+.modal
+  border-radius: 0
+  width: 100%
+  min-height: 100%
+  transform: translateY(-10%) scale(1)!important
+  h4
+    color: #222
+    font-family: $Roboto
+    font-size: 24px
+    font-weight: 400
+    line-height: 36px
+    padding-bottom: 15px
+
+  .modal-close
+    position: absolute
+    right: 4px
+    top: 4px
+    .icon-cancel
+      display: block
+      +sprite($cancel)
+
+  .modal-content
+    padding: 0
+
+  .inputWrapp
+    padding-top: 20px
+    position: relative
+    .error
+      display: none
+      position: absolute
+      color: red
+      font-family: $defaultFont;
+      font-size: 11px
+      font-weight: 400
+      top: 0
+      &.active
+        display: block
+  input
+    width: 100%
+    height: 32px
+    background-color: white
+    border: 1px solid #ebebeb
+    border-radius: 4px
+    padding-left: 11px
+    &.error-input
+      border: 1px solid red
+
+.modalCallBack
+  padding: 20px
+
+  input[type=submit]
+    width: 120px
+    margin-top: 20px
+    font-size: 11px
+    font-weight: 700
+    line-height: 12px
+    text-transform: uppercase
+    border: 1px solid #0044a9
+
+
+.modalLoginForm
+  .modal-close
+    .icon-cancel
+      +sprite($cancel-white)
+  .modal-content
+    display: flex
+    height: 100%
+
+  .leftModalContent,
+  .rightModalContent
+    width: 50%
+  .leftModalContent
+    padding: 60px 44px 20px 41px
+  .rightModalContent
+    background-image: url(../images/upload/sectionOne/backLoginFrom.jpg)
+    background-repeat: no-repeat
+    padding-left: 25px
+    background-size: cover
+    padding-top: 15px
+    h4
+      color: white
+      font-weight: 700
+      font-size: 34px
+
+  .registration,
+  .sigin
+    position: absolute
+    opacity: 0
+    visibility: hidden
+    transition: .35s all
+    transform: scale(.7)
+    &.active
+      transform: scale(1)
+      position: relative
+      opacity: 1
+      visibility: visible
+
+
+      // visibility: visible
+
+  input[type=submit]
+    border: 1px solid #0044a9
+
+  .infoGroup
+    align-items: center
+    justify-content: flex-start
+    margin-bottom: 40px
+    &:last-child
+      margin-bottom: 0
+    .desc
+      width: 270px
+      color: white
+      font-family: $Roboto
+      font-size: 17px
+      font-weight: 700
+      line-height: 18px
+      padding-left: 29px
+
+  .fogotPassword
+    margin: 19px 0 20px
+    display: block
+    color: #0044a9;
+    font-family: $defaultFont
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none
+
+  .brendLable
+    color: #222
+    font-family: $defaultFont
+    font-size: 15px
+    font-weight: 400
+    display: block
+    margin-bottom: 10px
+
+
+  .icon-procent
+    +sprite($procent)
+  .icon-present-white
+    +sprite($present-white)
+  .icon-hand-pointer
+    +sprite($hand-pointer)
+  .rocket-ship
+    +sprite($rocket-ship)
+
+
+
+  .btnGroup
+    width: 344px
+    height: 32px
+    display: flex
+    border: 1px solid #0044a9
+    border-radius: 4px
+    overflow: hidden
+    margin-bottom: 13px
+    position: absolute
+    left: 41px
+    top: 20px
+    z-index: 2
+    .btn
+      width: 100%
+      border-radius: 0
+      display: flex
+      align-items: center
+      padding-left: 7px
+      border: none
+      span
+        padding-left: 9px
+      .icon-login
+        +sprite($login)
+      .icon-register
+        +sprite($register-blue)
+
+      &:hover
+        .icon-login
+          +sprite($login-white)
+        .icon-register
+          +sprite($register)
+      &.active
+        background-color: #0044a9
+        color: #fff
+
+        .icon-register
+          +sprite($register)
+        .icon-login
+          +sprite($login-white)
+
+
+  .checkedGroup
+    display: flex
+    align-items: center
+    color: #0044a9
+    font-family: $defaultFont
+    font-size: 15px
+    font-weight: 400
+    padding-top: 20px
+    input[type="checkbox"]
+      width: 15px
+      height: 15px
+      border: none;
+      padding: 0;
+      border-radius: 0;
+      margin: 0;
+      margin-right: 12px;
+
+
+    .qw
+      width: 15px
+      height: 15px
+      background-color: #0044a9
+      border-radius: 50%
+      color: #fff
+      text-align: center
+      padding: 1px
+      margin-left: 6px
+      font-family: $brendFontBold
+  .footerModal
+    display: flex
+    padding-top: 18px
+    .btn
+      width: 120px
+      margin-right: 20px
+  .infoText
+    p, a
+      font-family: $defaultFont
+      font-size: 12px
+      font-weight: 400
+      color: #6d737b
+      text-decoration: none
+    a
+      color: #0044a9
+
+  .loginBtn
+    width: 84px
+    background-color: transparent
+    border: 1px solid #0044a9
+    padding: 0
+
+@media #{$medium}
+  .modalCallBack
+    max-width: 426px;
+    max-height: 295px;
+    width: 100%
+    background-color: #f6f6f6;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.35)
+    padding: 33px 41px
+
+  .modalLoginForm
+    width: 850px
+    height: 482px
+    min-height: 482px
+    background-color: #f6f6f6;
+    box-shadow: -14.6px 13.6px 13px rgba(0, 0, 0, 0.26)
