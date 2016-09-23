@@ -66,7 +66,7 @@
   });
 
   // Menu dropDown
-   $('.dropDown').click(function(){
+   $('.wrappMenu .dropDown').click(function(){
     $(this).toggleClass('active');
     $('.catalogProductsMenu').slideToggle(300);
      overlay.addClass('active');
@@ -104,31 +104,47 @@
   // Modal
   // ---------------------------------------------------------------------------
   $('.modal-trigger').leanModal({
-    starting_top: '0%',
+    starting_top: '10%',
   });
 
-  // $('#modal2').openModal();
+  $('#modal2').openModal();
+  // /////////////////////////////////////////////////
+  $('.loginBtnModal').click(function(e){
 
-  $('.authorization .btn').click(function(e){
-    $('.authorization .btn').removeClass('active');
-
-    // $('.WrappRegistration').fadeToggle(300);
-    // $('.WrappSigin').fadeToggle(300);
-
-  // registration
-
-
-    if ($('.registration').hasClass('active') == true){
-
-      $('.registration').removeClass('active');
-      $('.sigin').addClass('active');
+    if($(this).hasClass('active')){
+      return;
     }
     else{
-      $('.registration').addClass('active');
-      $('.sigin').removeClass('active');
+      $('.authorization .btn').removeClass('active');
+      $(this).addClass('active');
+      $('.registration').removeClass('active');
+      $('.forgotPwd').removeClass('active');
+      $('.sigin').addClass('active');
     }
+  });
+  // ////////////////////////////////////////////////////////////////
+  $('.rigisterBtnModal').click(function(e){
+    console.log(e.target.parentNode)
+    if(e.target.parentNode.className == 'active'){
+      return;
+    }
+    else{
+      $('.authorization .btn').removeClass('active');
+      $(this).addClass('active');
+      $('.forgotPwd').removeClass('active');
+      $('.sigin').removeClass('active');
+      $('.registration').addClass('active');
+    }
+  });
+  // ////////////////////////////////////
+  $('.fogotPassword').click(function(e){
 
-    $(this).addClass('active');
+   $('.authorization .btn').removeClass('active');
+
+
+    $('.sigin').removeClass('active');
+    $('.forgotPwd').addClass('active');
+
   });
 
   // Simlebar Scroll
@@ -148,18 +164,19 @@
 
   });
 
+
 // scroll-----------------------------------------------------------------------
-$(window).scroll(function (event) {
-    var scroll = $(window).scrollTop();
+// $(window).scroll(function (event) {
+//     var scroll = $(window).scrollTop();
 
-    if(scroll > 32){
-      $('.middle').addClass('fixed')
-    }
-    else{
-      $('.middle').removeClass('fixed')
-    }
+//     if(scroll > 32){
+//       $('.middle').addClass('fixed')
+//     }
+//     else{
+//       $('.middle').removeClass('fixed')
+//     }
 
-});
+// });
 
 
 // cart Delete
@@ -167,5 +184,28 @@ $(window).scroll(function (event) {
 
   //   $(this).parent().html('');
   // })
+// Acardion Menu
 
+  $(".burger-menu").click(function () {
+    $(this).toggleClass("menu-on");
+  });
+
+  $("#accordian a").click(function() {
+    var link = $(this);
+    var closest_ul = link.closest("ul");
+    var parallel_active_links = closest_ul.find(".active")
+    var closest_li = link.closest("li");
+    var link_status = closest_li.hasClass("active");
+    var count = 0;
+
+    closest_ul.find("ul").slideUp(function() {
+        if (++count == closest_ul.find("ul").length)
+            parallel_active_links.removeClass("active");
+    });
+
+    if (!link_status) {
+        closest_li.children("ul").slideDown();
+        closest_li.addClass("active");
+    }
+  });
 })(window);

@@ -1,12 +1,32 @@
 .menu
   border-bottom: solid 1px #44d654
-  height: 60px
+  height: auto
   display: flex
   background-color: #fff
   align-items: center
   .wrappMenu
-    display: flex
-    justify-content: flex-start
+    display: none
+    .dropDown
+      position: relative
+      cursor: pointer
+      width: 173px
+      height: 38px
+      background-color: #f6f6f6
+      border: 1px solid #b7b7b7
+      line-height: 38px
+      text-align: center
+      display: flex
+      align-items: center
+      color: #151f2f
+      font-family: $brendFontBold
+      font-size: 17px
+      padding-left: 7px
+      margin-right: 43px
+      .icon-arrow-down-black
+
+        +sprite($arrow-down-black)
+        margin-left: 7px
+        margin-right: 0px
   .link
     display: inline-block
     text-decoration: none
@@ -30,27 +50,7 @@
     &:last-child
       margin-right: 0
 
-  .dropDown
-    position: relative
-    cursor: pointer
-    width: 173px
-    height: 38px
-    background-color: #f6f6f6
-    border: 1px solid #b7b7b7
-    line-height: 38px
-    text-align: center
-    display: flex
-    align-items: center
-    color: #151f2f
-    font-family: $brendFontBold
-    font-size: 17px
-    padding-left: 7px
-    margin-right: 43px
-    .icon-arrow-down-black
 
-      +sprite($arrow-down-black)
-      margin-left: 7px
-      margin-right: 0px
 
 
   .catalogProductsMenu
@@ -137,3 +137,147 @@
       line-height: 18px
       &:hover
         color: #1f4ba5
+
+
+  // acardion ==================================================================
+  #accordian
+    background: #004050
+    width: 100%
+    margin: 0 auto
+    color: white
+    position: relative
+    // position: absolute
+    // top: 294px
+    h3
+      background: #fff
+      border-bottom: solid 1px rgba(34, 34, 34, 0.28);
+      a
+        padding: 0 10px
+        font-size: 12px
+        line-height: 34px
+        display: block
+        color: #222
+        text-decoration: none
+      &:hover
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.7)
+
+  i
+    margin-right: 10px
+
+  #accordian
+    li
+      list-style-type: none
+      background: rgba(255, 255, 255, 0.65)
+    ul ul li a, h4
+      color: #222
+      text-decoration: none
+      font-size: 11px
+      line-height: 27px
+      display: block
+      padding: 0 15px
+      transition: all 0.15s
+      position: relative
+    ul ul
+      li a:hover
+        background: #acc4cc
+        border-left: 5px solid lightgreen
+      display: none
+    li.active > ul
+      display: block
+    ul ul ul
+      margin-left: 15px
+      border-left: 1px dotted rgba(0, 0, 0, 0.5)
+    a:not(:only-child):after
+      content: ''
+      +sprite($arrow-down-black)
+      // transform: rotate(-90deg)
+      position: absolute
+      display: block
+      right: 20px
+      top: 0
+      bottom: 0
+      margin: auto
+    .active > a:not(:only-child):after
+      transform: rotate(-90deg)
+      content: ''
+
+      +sprite($arrow-down-black)
+
+    .dropDown
+      position: relative
+      &:after
+        content: ''
+        +sprite($arrow-down-black)
+        position: absolute;
+        top: 0;
+        margin-top: 14px;
+        right: 20px;
+
+  // burger---------------------------------------------------------------------
+  // .burger-menu
+  //   position: relative
+  //   width: 50px
+  //   height: 50px
+  //   cursor: pointer
+
+  // .burger
+  //   position: absolute
+  //   background: rgba(111, 111, 111, 1)
+  //   width: 100%
+  //   height: 10px
+  //   top: 50%
+  //   right: 0px
+  //   margin-top: -5px
+  //   opacity: 1
+  //   &::before
+  //     position: absolute
+  //     background: rgba(111, 111, 111, 1)
+  //     width: 50px
+  //     height: 10px
+  //     top: 20px
+  //     content: ""
+  //     display: block
+  //   &::after
+  //     position: absolute
+  //     background: rgba(111, 111, 111, 1)
+  //     width: 50px
+  //     height: 10px
+  //     bottom: 20px
+  //     content: ""
+  //     display: block
+  //     transition: all .3s ease-in-out
+  //     -webkit-transition: all .3s ease-in-out
+  //   &::before
+  //     transition: all .3s ease-in-out
+  //     -webkit-transition: all .3s ease-in-out
+  //   transition: all .3s ease-in-out
+  //   -webkit-transition: all .3s ease-in-out
+
+  // .burger-menu
+  //   &.menu-on .burger
+  //     &::after
+  //       transform: rotate(-45deg)
+  //       -webkit-transform: rotate(-45deg)
+  //       bottom: 0px
+  //     &::before
+  //       transform: rotate(45deg)
+  //       -webkit-transform: rotate(45deg)
+  //       top: 0px
+  //     background: rgba(111, 111, 111, 0)
+  //   margin-left: auto
+  //   margin-right: auto
+
+
+@media #{$medium}
+  .menu
+    height: 60px
+    .burger-menu
+      display: none
+    .wrappMenu
+      display: flex
+      justify-content: flex-start
+    #accordian
+      display: none
+
+
+

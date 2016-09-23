@@ -1,25 +1,26 @@
 .sectionOne
   min-height: 536px
   width: 100%
-
-
+  .wrappContent
+    padding: 0
   .wrappPhoto
     background-color: #f6f6f6
     background-image: url(../images/upload/sectionOne/doctor_w_1.png)
     background-repeat: no-repeat
     // padding-bottom: 100%
-    background-position: 170px bottom
+    background-position: bottom right
+
 
   .infoSectionOne
-    padding-top: 77px
+    padding: 40px 20px
     display: flex
     flex-direction: column
     align-content: flex-end
     align-items: flex-start
-    padding-bottom: 40px
-    margin-left: 634px
+    margin: auto
+    max-width: 350px
     .date
-      height: 14px;
+
       color: #686868;
       font-family: $defaultFont;
       font-size: 15px;
@@ -27,16 +28,15 @@
       text-transform: uppercase
     .actionText
       margin-top: 28px
-      width: 350px;
-      height: 34px;
+
+
+
       color: #1f4ba5;
       font-family: $defaultFont;
       font-size: 36px;
       font-weight: 700;
     .nameProduct
       margin-top: 13px
-      width: 312px;
-      height: 32px;
       color: #febe10;
       font-family: $defaultFont;
       font-size: 36px;
@@ -56,16 +56,19 @@
     display: flex
     max-width: 1089px
     justify-content: space-between
-
+    flex-direction: column
     .card
       display: flex
-      width: 320px;
+      max-width: 320px;
+      width: 100%
       height: 125px;
       background-color: white;
       border-radius: 2px;
       box-shadow: -6.6px 6.1px 24px rgba(64, 63, 68, 0.52)
       padding: 5px 13px 2px
-      margin-bottom: 39px
+
+      margin: 0 auto 10px
+
       .wrappImg
         margin-right: 24px
 
@@ -100,15 +103,17 @@
   .brendLineYellow
     display: flex
     align-items: center
-    height: 87px;
+    min-height: 87px;
     background-color: #febe10
     width: 100%
+    padding: 15px 20px 0 20px
     .flexB
       justify-content: space-between
     .briefInfo
       display: flex
       align-content: center
       align-items: center
+      padding-bottom: 15px
       .icon-plus
         +sprite($plus)
       .icon-clock-2
@@ -124,3 +129,21 @@
         font-size: 17px
         font-weight: 400
         margin-left: 22px
+
+@media #{$medium}
+  .sectionOne
+    .wrappPhoto
+      background-position: 170px bottom
+
+    .infoSectionOne
+      padding: 77px 0 40px
+      margin-left: 634px
+
+    .groupCard
+      flex-direction: row
+      padding-bottom: 39px
+
+    .brendLineYellow
+      padding: 0
+      .briefInfo
+        padding: 0

@@ -24,6 +24,58 @@ mixin ul
 mixin menu
 
   nav.menu
+    //- .burger-menu
+    //-   .burger
+
+    #accordian
+      ul
+        li.dropDown
+          h3
+            a(href='#') Каталог товаров
+          ul
+            li
+              a(href='#') Лекарства и БАДы
+              +ul
+              //- +ul
+              //- +ul
+
+            li
+              a(href='#') Гигиена
+              +ul
+
+            li
+              a(href='#') Мама и малыш
+              +ul
+
+            li
+              a(href='#') Мед.приборы и изделия
+
+            li
+              a(href='#') Спорт и фитнес
+
+            li
+              a(href='#') Косметика
+
+            li
+              a(href="#") Линзы
+        li
+          h3
+            a(href='#') О компании
+        li
+          h3
+            a(href='#') Поможем детям
+        li
+          h3
+            a(href='#') Арендодетелям
+        li
+          h3
+            a(href='#') Вакансии
+        li
+          h3
+            a(href='#') Новости
+        li
+          h3
+            a(href='#') Советы экспертов
     .wrappContent.wrappMenu.flexB
       a.dropDown
         span Каталог товаров

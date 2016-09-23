@@ -1,6 +1,6 @@
 .products
   display: flex
-  // justify-content: space-between
+  justify-content: space-around
   flex-flow: wrap
   padding-top: 38px
   .product
@@ -10,8 +10,8 @@
     height: 440px
     background-color: white
     padding: 37px 20px 37px 20px
-    margin-bottom: 20px
-    margin-right: 20px
+
+    margin: 0 5px 20px 5px
     will-change: auto
     transition: all .35s ease-in-out
     text-decoration: none
@@ -105,3 +105,9 @@
           right: 0
           background-color: grey
           position: absolute
+
+@media #{$medium}
+  .products
+    justify-content: flex-start
+    .product
+      margin: 0 20px 20px 0px

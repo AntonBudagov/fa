@@ -1,20 +1,22 @@
 .modal
   border-radius: 0
   width: 100%
-  min-height: 100%
+  // min-height: 100%
   transform: translateY(-10%) scale(1)!important
+  top: 10%!important
   h4
     color: #222
     font-family: $Roboto
     font-size: 24px
     font-weight: 400
     line-height: 36px
-    padding-bottom: 15px
+    padding-bottom: 0px
 
   .modal-close
     position: absolute
     right: 4px
     top: 4px
+    z-index: 2
     .icon-cancel
       display: block
       +sprite($cancel)
@@ -32,7 +34,7 @@
       font-family: $defaultFont;
       font-size: 11px
       font-weight: 400
-      top: 0
+      bottom: 34px
       &.active
         display: block
   input
@@ -45,7 +47,7 @@
     &.error-input
       border: 1px solid red
 
-.modalCallBack
+.modalCallBack, .forgotPwd
   padding: 20px
 
   input[type=submit]
@@ -61,29 +63,33 @@
 .modalLoginForm
   .modal-close
     .icon-cancel
-      +sprite($cancel-white)
+      +sprite($cancel)
+
   .modal-content
     display: flex
     height: 100%
+    flex-direction: column
 
   .leftModalContent,
   .rightModalContent
-    width: 50%
+    width: 100%
   .leftModalContent
-    padding: 60px 44px 20px 41px
+    padding: 80px 20px 20px
   .rightModalContent
     background-image: url(../images/upload/sectionOne/backLoginFrom.jpg)
     background-repeat: no-repeat
-    padding-left: 25px
+    padding: 15px 20px
     background-size: cover
-    padding-top: 15px
+
     h4
       color: white
       font-weight: 700
       font-size: 34px
+      margin-bottom: 20px
 
   .registration,
-  .sigin
+  .sigin,
+  .forgotPwd
     position: absolute
     opacity: 0
     visibility: hidden
@@ -104,7 +110,8 @@
   .infoGroup
     align-items: center
     justify-content: flex-start
-    margin-bottom: 40px
+    margin-bottom: 20px
+    flex-direction: column
     &:last-child
       margin-bottom: 0
     .desc
@@ -114,7 +121,8 @@
       font-size: 17px
       font-weight: 700
       line-height: 18px
-      padding-left: 29px
+      padding: 15px 0 0 0
+
 
   .fogotPassword
     margin: 19px 0 20px
@@ -146,7 +154,8 @@
 
 
   .btnGroup
-    width: 344px
+
+    width: 90%
     height: 32px
     display: flex
     border: 1px solid #0044a9
@@ -154,8 +163,10 @@
     overflow: hidden
     margin-bottom: 13px
     position: absolute
-    left: 41px
-    top: 20px
+    left: 0
+    top: 40px
+    right: 0
+    margin: auto
     z-index: 2
     .btn
       width: 100%
@@ -217,6 +228,7 @@
   .footerModal
     display: flex
     padding-top: 18px
+    justify-content: space-between
     .btn
       width: 120px
       margin-right: 20px
@@ -237,6 +249,9 @@
     padding: 0
 
 @media #{$medium}
+  .modal
+    h4
+      padding-bottom: 15px
   .modalCallBack
     max-width: 426px;
     max-height: 295px;
@@ -251,3 +266,40 @@
     min-height: 482px
     background-color: #f6f6f6;
     box-shadow: -14.6px 13.6px 13px rgba(0, 0, 0, 0.26)
+    .modal-close
+      .icon-cancel
+        +sprite($cancel-white)
+    .btnGroup
+      width: 100%
+      max-width: 344px
+      left: 41px
+      right: 0
+      margin: 0
+      top: 20px
+    .modal-content
+      flex-direction: row
+      .leftModalContent,
+      .rightModalContent
+        width: 50%
+        h4
+          margin-bottom: 0
+      .leftModalContent
+        padding: 60px 41px 20px 41px
+
+      .infoGroup
+
+        margin-bottom: 35px
+
+        flex-direction: row
+        .desc
+          padding: 0 0 0 29px
+
+
+      .footerModal
+        justify-content: flex-start
+
+      .rightModalContent
+        padding: 15px 0 0 25px
+
+
+

@@ -1,27 +1,27 @@
 .sectionThree
-  padding-top: 60px
-
+  padding-top: 20px
+  .wrappContent
+    padding: 0
 .brendDefaultLine
   display: flex
   // align-items: center
 
-  height: 199px
+  min-height: 199px
   border-bottom: solid 1px #ebebeb
   border-top: solid 1px #ebebeb
-  padding-top: 92px
-  padding-left: 20px
+  padding: 20px 0
+
   width: 100%
   .flexB
     align-items: flex-start
-    justify-content: flex-start
+
+    justify-content: space-around
   .briefInfo
     display: flex
     align-content: center
     align-items: center
-    &:first-child
-      margin-right: 81px
-    &:nth-child(2)
-      margin-right: 128px
+    flex-direction: column
+    padding: 0 20px
     .icon-timer
       +sprite($timer)
     .icon-bag-like-plus
@@ -30,8 +30,9 @@
       +sprite($medal)
 
     .desc
-      width: 210px
-      margin-left: 40px
+      width: 100%
+      margin: 15px 0
+      text-align: center
     .title
       height: 17px
       color: #0044a9
@@ -48,12 +49,13 @@
       font-weight: 400
       line-height: 24px
 
+// Personal
 .personal
-  padding-top: 86px
+  padding-top: 40px
   .presonalWrapp
     align-items: center
     align-content: center
-    justify-content: flex-start
+    justify-content: space-around
     margin-top: 36px
     .person
       margin-right: 20px
@@ -65,7 +67,7 @@
       .namePerson
         text-align: center
         margin: 17px auto 0
-        width: 92px
+        width: 100%
         color: #222
         font-family: Roboto
         font-size: 17px
@@ -132,10 +134,9 @@
               &:last-child
                 transform: translateY(0px)
 
-
 //  Review
 .review
-  padding-top: 52px
+  padding-top: 40px
 
 
   .wrappReview
@@ -174,11 +175,10 @@
       font-weight: 400;
       line-height: 18px;
 
-
 // News And Posts
 .newsPosts
   justify-content: space-between
-  padding-top: 52px
+
 
   .news, .posts
     width: 100%
@@ -192,14 +192,17 @@
       padding: 23px 20px
       display: flex
       margin-bottom: 20px
+      flex-direction: column
 
       .wrappImg
-        width: 200px
-        height: 200px
-        margin-right: 23px
+        text-align: center
+        width: 100%
+        height: auto
+        margin: 0 0 15px 0
 
     .description
-      max-width: 327px
+      width: 100%
+      // max-width: 327px
 
 
     h5
@@ -207,7 +210,7 @@
       font-size: 17px
       font-weight: 700
       margin-bottom: 19px
-      max-width: 250px
+
       padding-top: 3px
       letter-spacing: 1px
     p
@@ -221,17 +224,23 @@
     font-weight: 700;
     text-decoration: none
     transition: all .35s
+    display: inline-block
+    padding-top: 10px
     &:hover
       text-decoration: underline
+
+  .posts, .news
+    padding-top: 40px
+
 
 .brendWhiteLine
   width: 100%
   margin: 60px auto 0
-  padding: 14px 0
+  padding: 20px 20px
   background-color: #fff
   min-height: 103px
   .flexB
-    justify-content: flex-start
+    justify-content: center
   .mail
     width: 75px
     height: 75px
@@ -240,37 +249,35 @@
     display: flex;
     align-items: center
     justify-content: center
-    margin-right: 30px
-    margin-left: 35px
+    margin: auto
   .icon-mail
     display: block
     +sprite($mail-big)
   .textInfo
-    width: 390px
+    width: 100%
     color: #4f4f4f
     font-family: $defaultFont
     font-size: 30px
     font-weight: 400
-    margin-right: 24px
+    text-align: center
     letter-spacing: 2px
+    margin: 15px 0
   .inputWrapp
-    margin-right: 31px
+    margin: 0 0 20px
+    width: 100%
     input
-      width: 214px
       height: 32px
       border: 1px solid #d7d7d7
       padding-left: 11px
-    &:nth-child(4)
-      margin-right: 38px
 
 
 // Abour pharmacy
 
 .aboutPharmacy
-  padding-top: 60px
+  padding-top: 40px
 
   .contentAboutPharmacy
-    margin-top: 33px
+    margin-top: 30px
     padding-bottom: 57px
     word-spacing: 3px;
   p
@@ -279,3 +286,94 @@
     font-size: 15px
     font-weight: 400
     margin-bottom: 20px
+
+@media #{$small }
+  .brendDefaultLine
+    .briefInfo
+      flex-direction: row
+      padding: 0
+      .desc
+        max-width: 210px
+        margin: 0 0 0 20px
+        text-align: left
+  // News And Posts
+  // .newsPosts
+  //   .news
+  //     .newContet
+  //       flex-direction: row
+  //       .wrappImg
+  //         max-width: 200px
+  //         max-height: 200px
+  //         margin: 0 23px 0 0
+
+
+@media #{$medium}
+  .sectionThree
+    padding-top: 60px
+
+  .brendDefaultLine
+    padding: 92px 0 0 20px
+    justify-content: flex-start
+    .briefInfo
+
+      margin-bottom: 0
+      &:first-child
+        margin-right: 81px
+      &:nth-child(2)
+        margin-right: 128px
+      .desc
+        margin: 0 0 0 40px
+
+  // personal-------------------
+  .personal
+    padding-top: 86px
+    .presonalWrapp
+      justify-content: flex-start
+      .person
+        .name
+          width: 93px
+  //  Review
+
+  .review
+    padding-top: 52px
+
+  // News And Posts
+  .newsPosts
+    .news, .posts
+      padding-top: 52px
+      .newContet
+        flex-direction: row
+        .wrappImg
+          max-width: 200px
+          max-height: 200px
+          margin: 0 23px 0 0
+      h5
+        max-width: 250px
+      .description
+        max-width: 327px
+
+  .brendWhiteLine
+    justify-content: flex-start
+    padding: 14px 0
+    .mail
+      margin: 0 30px 0 35px
+    .textInfo
+      max-width: 390px
+      margin: 0 24px 0 0
+      text-align: left
+    .inputWrapp
+      width: 214px
+      margin: 0 31px 0 0
+      &:nth-child(4)
+        margin-right: 38px
+
+  // Abour pharmacy
+
+  .aboutPharmacy
+    padding-top: 60px
+    .contentAboutPharmacy
+      margin-top: 30px
+
+
+
+

@@ -4,11 +4,16 @@
 
   .wrappFooter
     display: flex
-    justify-content: flex-start
+    justify-content: space-between
+    flex-wrap: wrap
   .menuFooter
-    padding-bottom: 57px
-    display: flex
 
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    ul
+      width: 200px
+      margin: 0 10px 20px
     li
       color: #222
       font-family: $defaultFont
@@ -17,7 +22,7 @@
       line-height: 18px
       padding-bottom: 6px
       &:first-child
-        padding-bottom: 21px
+        padding-bottom: 10px
       a
         color: #1f4ba5;
         font-family: $defaultFont
@@ -27,10 +32,7 @@
         letter-spacing: 1px
         &:hover
           text-decoration: underline
-    ul
 
-      &:nth-child(2)
-        margin: 0 169px 0 106px
   .copyright
 
     color: #6d737b;
@@ -63,7 +65,7 @@
 
 
   .contact
-
+    margin-bottom: 20px
     .phoneFooter
       color: #222;
       font-family: $defaultFont;
@@ -71,7 +73,8 @@
       font-weight: 700
       line-height: 18px
       text-decoration: none
-      margin: 30px 0 41px
+      margin: 15px auto 20px
+
       display: block
       letter-spacing: 1px
       white-space: nowrap
@@ -87,19 +90,19 @@
 
 
 .social
-  max-width: 177px
-  margin: 0 72px 0 108px
+  a
+    margin: 0 10px
+
   h5
     color: #222;
     font-family: $defaultFont;
     font-size: 15px;
     font-weight: 600;
     line-height: 18px;
-    padding-bottom: 27px
+    padding-bottom: 10px
 
   .flexB
-    justify-content: space-between
-
+    justify-content: flex-start
 
   .icon
     display: block
@@ -116,3 +119,40 @@
   +sprite($odnoklassniki-logo)
 .icon-tw
   +sprite($twitter-logo-button)
+
+
+@media #{$medium}
+  .footer
+
+    .wrappFooter
+      justify-content: flex-start
+
+
+    .menuFooter
+      justify-content: flex-start
+      padding-bottom: 57px
+      ul
+        width: auto
+        margin: 0
+        &:nth-child(2)
+          margin: 0 169px 0 106px
+      li
+        &:first-child
+          padding-top: 21px
+
+    .social
+
+      max-width: 177px
+      margin: 0 72px
+      a
+        margin: auto
+      h5
+        padding-bottom: 27px
+      .flexB
+        justify-content: space-between
+
+
+    .contact
+      margin-bottom: 0px
+      .phoneFooter
+        margin: 30px 0 41px

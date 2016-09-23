@@ -27,6 +27,7 @@ body
   min-height: 100%
   height: auto
   max-width: 100%
+  min-width: 320px
   background-color: #f6f6f6
   overflow-y: auto
   overflow-x: hidden
@@ -91,12 +92,21 @@ textarea
 input.error
   border-bottom: solid 2px #ee6e73
 
+input[placeholder]
+  text-overflow: ellipsis
+
+input::-moz-placeholder
+  text-overflow: ellipsis
+input:-moz-placeholder
+  text-overflow: ellipsis
+input:-ms-input-placeholder
+  text-overflow: ellipsis
+
 input::-webkit-input-placeholder
   font-family: $defaultFont
   color: #909090
   font-size: 15px
   font-weight: 400
-
   // line-height: 50px
 
 input::-moz-placeholder

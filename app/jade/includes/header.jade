@@ -170,10 +170,10 @@ mixin header
       i.icon.icon-cancel
     .modal-content
       .btnGroup.authorization
-        .btn
+        .btn.loginBtnModal
           i.icon.icon-login
           span Вход на сайт
-        .btn.active
+        .btn.rigisterBtnModal.active
           i.icon.icon-register
           span РЕГИСТРАЦИЯ
       .leftModalContent.registration.active
@@ -219,7 +219,15 @@ mixin header
         a.link.fogotPassword(href="#") Забыли пароль?
 
         input.btn.loginBtn(type="submit" value="войти")
+      .leftModalContent.forgotPwd
+        h4 Восстановление пароля
+        .inputWrapp
+          lable.brendLable Email или телефон
+          .error Не указан email!
+          input(type="email" placeholder="Email" name="email")
 
+
+        input.btn.registerBtn(type="submit" value="отправить")
 
       .rightModalContent
         h4 Почему стоит пройти регистрацию:
