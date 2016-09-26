@@ -50,7 +50,9 @@ mixin header
 
         a.logo(href="#")
           img(src="images/logo.jpg", alt="Фармия")
-
+        .dropDown.dropDownTopMenu
+          span Каталог товаров
+          i.iocn.icon-arrow-down-black
         form.navbar-form-search(role='search')
           input#search(type='text', placeholder='Введите название лекарства (поиск по 30 000 товарам)', name='search')
           button.btn.btnSearch(type='submit')
@@ -60,76 +62,77 @@ mixin header
           .searchContent
             .wrpappSearchContent
               .title Товары
-              .scrollSeacrh.simplebar
-                .nameSerch
+              .scrollSeacrh(data-simplebar-direction="vertical")
+                a.nameSerch(href="#")
                   span Анальгин таблетки 500 мг, 10 шт.
                   span 1456.69 руб.
-                .nameSerch
+                a.nameSerch(href="#")
                   span Анальгин таблетки 500 мг, 10 шт.
                   span 1456.69 руб.
-                .nameSerch
+                 a.nameSerch(href="#")
                   span Анальгин таблетки 500 мг, 10 шт.
                   span 1456.69 руб.
-                .nameSerch
+                 a.nameSerch(href="#")
                   span Анальгин таблетки 500 мг, 10 шт.
                   span 1456.69 руб.
-                .nameSerch
+                 a.nameSerch(href="#")
                   span Анальгин таблетки 500 мг, 10 шт.
                   span 1456.69 руб.
               .title Статьи
-              .scrollSeacrh.simplebar
-                .nameSerch
+              .scrollSeacrh(data-simplebar-direction="vertical")
+                 a.nameSerch(href="#")
                   span Название статьи бла бла бла
-                .nameSerch
+                 a.nameSerch(href="#")
                   span Название другой статьи бла бла бла бла
 
 
         .btn.loginBtn.modal-trigger(href="#modal2") войти
-        .btn.btnCart
-          i.icon.icon-cart
-          span корзина
-          //- Small Scroll
-        .smallPopupCartScrool
-          #wrappScroll.simplebar
-            .contentSmallPopupCart
-              .wrappSmallPopupCart
-                .wrappImg
-                  img(src="images/upload/products/p3.png", alt="")
-                .desc
-                  span.name Синафлан линимент 0,025%
-                  span.price 192 руб.
-                .delete
-                  i.icon.icon-close
-            .contentSmallPopupCart
-              .wrappSmallPopupCart
-                .wrappImg
-                  img(src="images/upload/products/p3.png", alt="")
-                .desc
-                  span.name Синафлан линимент 0,025%
-                  span.price 192 руб.
-                .delete
-                  i.icon.icon-close
-            .contentSmallPopupCart
-              .wrappSmallPopupCart
-                .wrappImg
-                  img(src="images/upload/products/p3.png", alt="")
-                .desc
-                  span.name Синафлан линимент 0,025%
-                  span.price 192 руб.
-                .delete
-                  i.icon.icon-close
-            .contentSmallPopupCart
-              .wrappSmallPopupCart
-                .wrappImg
-                  img(src="images/upload/products/p3.png", alt="")
-                .desc
-                  span.name Синафлан линимент 0,025%
-                  span.price 192 руб.
-                .delete
-                  i.icon.icon-close
-          .footerSmallPopupCartScrool
-            .btn.catBtn перейти в корзину
-            .btn.checkoutBtn Оформить заказ
+        .hoverCart
+          .btn.btnCart
+            i.icon.icon-cart
+            span корзина
+            //- Small Scroll
+          .smallPopupCartScrool
+            #wrappScroll(data-simplebar-direction="vertical")
+              .contentSmallPopupCart
+                .wrappSmallPopupCart
+                  .wrappImg
+                    img(src="images/upload/products/p3.png", alt="")
+                  .desc
+                    span.name Синафлан линимент 0,025%
+                    span.price 192 руб.
+                  .delete
+                    i.icon.icon-close
+              .contentSmallPopupCart
+                .wrappSmallPopupCart
+                  .wrappImg
+                    img(src="images/upload/products/p3.png", alt="")
+                  .desc
+                    span.name Синафлан линимент 0,025%
+                    span.price 192 руб.
+                  .delete
+                    i.icon.icon-close
+              .contentSmallPopupCart
+                .wrappSmallPopupCart
+                  .wrappImg
+                    img(src="images/upload/products/p3.png", alt="")
+                  .desc
+                    span.name Синафлан линимент 0,025%
+                    span.price 192 руб.
+                  .delete
+                    i.icon.icon-close
+              .contentSmallPopupCart
+                .wrappSmallPopupCart
+                  .wrappImg
+                    img(src="images/upload/products/p3.png", alt="")
+                  .desc
+                    span.name Синафлан линимент 0,025%
+                    span.price 192 руб.
+                  .delete
+                    i.icon.icon-close
+            .footerSmallPopupCartScrool
+              .btn.catBtn перейти в корзину
+              .btn.checkoutBtn Оформить заказ
         .smallPopupCart
           .topSmallPopupCart
             .wrappSmallPopupCart
@@ -157,12 +160,12 @@ mixin header
     .modal-content
       h4 Заказать звонок
       .inputWrapp
-        .error Не указанно имя!
+        .help-block Не указанно имя!
         input(type="text" placeholder="Ваше имя" name="name")
       .inputWrapp
-        .error.active Не указан телефон!
+        .help-block.active Не указан телефон!
         input.error-input(type="tel" placeholder="Телефон" name="tel")
-      input.btn(type="submit")
+      input.btn(type="submit" value="отправить")
 
   //- Modal modalLoginForm
   #modal2.modal.modalLoginForm
@@ -180,16 +183,16 @@ mixin header
 
         h4 Регистрация на сайте
         .inputWrapp
-          .error Не указанно имя!
+          .help-block Не указанно имя!
           input(type="text" placeholder="Ваше имя" name="name")
         .inputWrapp
-          .error.active Не указан телефон!
+          .help-block.active Не указан телефон!
           input.error-input(type="tel" placeholder="Телефон" name="tel")
         .inputWrapp
-          .error.active Не указан email!
+          .help-block.active Не указан email!
           input.error-input(type="email" placeholder="Email" name="email")
         .inputWrapp
-          .error пароль слишком короткий!
+          .help-block пароль слишком короткий!
           input.error-input(type="password" placeholder="Пароль" name="pwd")
 
         .checkedGroup
@@ -198,7 +201,7 @@ mixin header
           .qw ?
 
         .inputWrapp
-          .error пароль слишком короткий!
+          .help-block пароль слишком короткий!
           input(type="text" placeholder="Пин-код специалиста" name="pinkod")
 
         .footerModal
@@ -206,15 +209,15 @@ mixin header
           .infoText
             p Регистрируясь, вы соглашаетесь с
             a(href="#") Политикой конфиденциальности
-      .leftModalContent.sigin
+      .leftModalContent.signIn
         h4 Авторизация на сайте
         .inputWrapp
           lable.brendLable Email или телефон
-          .error Не указанно имя!
+          .help-block Не указанно имя!
           input(type="text" placeholder="+7" name="name")
         .inputWrapp
           lable.brendLable Пароль
-          .error пароль слишком короткий!
+          .help-block пароль слишком короткий!
           input(type="password" placeholder="Пароль" name="pwd")
         a.link.fogotPassword(href="#") Забыли пароль?
 
@@ -223,7 +226,7 @@ mixin header
         h4 Восстановление пароля
         .inputWrapp
           lable.brendLable Email или телефон
-          .error Не указан email!
+          .help-block Не указан email!
           input(type="email" placeholder="Email" name="email")
 
 

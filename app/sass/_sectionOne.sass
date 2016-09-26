@@ -1,14 +1,41 @@
 .sectionOne
   min-height: 536px
   width: 100%
+  position: relative
   .wrappContent
     padding: 0
   .wrappPhoto
+
     background-color: #f6f6f6
-    background-image: url(../images/upload/sectionOne/doctor_w_1.png)
+    // background-image: url(../images/upload/sectionOne/doctor_w_1.png)
     background-repeat: no-repeat
     // padding-bottom: 100%
     background-position: bottom right
+    height: auto
+    display: flex
+
+    .wrappImg
+      text-align: center
+  .photosectionOne
+    position: absolute
+    left: 0
+    right: 0
+    margin: auto
+    bottom: 0
+    top: 0
+    img
+      max-width: none
+
+  .infoSectionOne
+    transform: translateX(550px)
+    opacity: 0
+  .active
+
+    .infoSectionOne
+      animation: .77s photo forwards
+      animation-delay: .75s
+      // background: rgba(255, 255, 255, 0.34)
+      width: 100%
 
 
   .infoSectionOne
@@ -19,6 +46,7 @@
     align-items: flex-start
     margin: auto
     max-width: 350px
+
     .date
 
       color: #686868;
@@ -43,20 +71,30 @@
       font-weight: 700;
     .desc
       margin-top: 29px
-      margin-bottom: 50px
+      // margin-bottom: 50px
       height: 15px;
       color: #686868;
       font-family: $defaultFont
       font-size: 15px;
       font-weight: 400;
+    .btnMore
+      margin-top: 50px
 
 
   .groupCard
     margin: 0 auto
-    display: flex
+    //display: none
     max-width: 1089px
     justify-content: space-between
     flex-direction: column
+    position: relative
+    left: 0
+    right: 0
+    margin: auto
+    bottom: 20px
+    padding-bottom: 0
+    .owl-item
+      height: 145px
     .card
       display: flex
       max-width: 320px;
@@ -66,11 +104,13 @@
       border-radius: 2px;
       box-shadow: -6.6px 6.1px 24px rgba(64, 63, 68, 0.52)
       padding: 5px 13px 2px
-
+      cursor: pointer
       margin: 0 auto 10px
 
       .wrappImg
         margin-right: 24px
+        width: 100px
+        overflow: hidden
 
       .date
         color: #686868;
@@ -134,16 +174,41 @@
   .sectionOne
     .wrappPhoto
       background-position: 170px bottom
+      padding: 20px  0 0 170px
+      height: 533px
+    .photosectionOne
+      position: relative
+      margin: 0 154px 0 0
+      transform: translateX(550px)
+      opacity: 0
 
+    .active
+      .photosectionOne
+        animation: .77s  photo forwards
+        animation-delay: .35s
+      .infoSectionOne
+        background: transparent
     .infoSectionOne
-      padding: 77px 0 40px
-      margin-left: 634px
+      padding: 54px 0 40px
+      margin: 0
+      // margin-left: 634px
 
     .groupCard
+      position: absolute
       flex-direction: row
-      padding-bottom: 39px
+      display: flex
+      bottom: 104px
+      // padding-bottom: 39px
 
     .brendLineYellow
       padding: 0
       .briefInfo
         padding: 0
+
+@keyframes photo
+  0%
+    transform: translateX(550px)
+    opacity: 0
+  100%
+    transform: translateX(0px)
+    opacity: 1

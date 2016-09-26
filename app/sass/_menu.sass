@@ -23,7 +23,6 @@
       padding-left: 7px
       margin-right: 43px
       .icon-arrow-down-black
-
         +sprite($arrow-down-black)
         margin-left: 7px
         margin-right: 0px
@@ -37,18 +36,18 @@
     padding-bottom: 5px
     border-bottom: solid 2px transparent
     // letter-spacing: 1px
-    margin-right: 59px
+    // margin-right: 59px
     &:hover
       color: #1f4ba5
       border-bottom: solid 2px #1f4ba5
-    &:nth-child(4)
-      margin-right: 60px
-    &:nth-child(5)
-      margin-right: 67px
-    &:nth-child(6)
-      margin-right: 100px
-    &:last-child
-      margin-right: 0
+    // &:nth-child(4)
+    //   margin-right: 60px
+    // &:nth-child(5)
+    //   margin-right: 67px
+    // &:nth-child(6)
+    //   margin-right: 100px
+    // &:last-child
+    //   margin-right: 0
 
 
 
@@ -271,11 +270,19 @@
 @media #{$medium}
   .menu
     height: 60px
+    .catalogProductsMenu
+      &.fixed
+        position: fixed
+        top: 55px
     .burger-menu
       display: none
     .wrappMenu
       display: flex
-      justify-content: flex-start
+      justify-content: space-between;
+      // justify-content: flex-start
+
+
+
     #accordian
       display: none
 

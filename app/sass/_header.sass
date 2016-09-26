@@ -52,7 +52,7 @@
         justify-content: space-between
         flex-wrap: wrap
         .group
-          width: 108px
+          width: 150px
         a
 
           display: block
@@ -74,7 +74,7 @@
         font-size: 16px
         font-weight: 700
         display: block
-        letter-spacing: 2px
+        letter-spacing: 0
 
 
   .middle
@@ -83,8 +83,31 @@
     background-color: #fff
     width: 100%
     display: flex
+    z-index: 111
+    .dropDownTopMenu
+      position: relative;
+      cursor: pointer;
+      width: 173px;
+      height: 38px;
+      background-color: #f6f6f6;
+      border: 1px solid #b7b7b7;
+      line-height: 38px;
+      text-align: center;
+      display: none
+      align-items: center;
+      color: #151f2f;
+      font-size: 17px;
+      padding-left: 7px;
+      margin-right: 43px;
+      .icon-arrow-down-black
+        +sprite($arrow-down-black)
+        margin-left: 7px
+        margin-right: 0px
 
-    // justify-content: flex
+
+
+
+
 
     .flexB
       padding: 0 20px
@@ -127,17 +150,21 @@
     position: absolute
     max-width: 542px;
     width: 100%
-    height: 275px;
+    height: 275px
     background-color: white;
     box-shadow: 0 0 4px rgba(17, 16, 16, 0.1)
     top: 36px
     padding: 10px 9px
+    left: 0
+
     .wrpappSearchContent
       height: 100%
+      width: 100%
     .scrollSeacrh
       max-height: 134px
       min-height: 44px
       height: 100%
+      width: 100%
     .title
       width: 100%
       border-bottom: solid 1px #44d654
@@ -150,10 +177,11 @@
     .nameSerch
       display: flex
       justify-content: space-between
+      width: 100%
     .nameProduct, .priceProduct, span
       color: #222
       font-family: $defaultFont;
-      font-size: 15px;
+      font-size: 12px;
       font-weight: 600;
       line-height: 18px;
       margin-bottom: 3px;
@@ -166,15 +194,15 @@
 
     .priceProduct
       text-align: right
-  .middle
-    &.fixed
-      position: fixed
-      z-index: 111
-      top: 0
+
   .bottom
     background-color: #fff
 
-
+@media #{$small}
+  .header
+    .top
+      .rightTop
+        width: 50%
 @media #{$medium}
   .header
     .top
@@ -193,8 +221,13 @@
         width: 50%
         a
           display: inline
+          letter-spacing: 2px
         .phone
           margin-right: 17px
+
+    .searchContent
+      span
+        font-size: 15px
 
     .middle
       .logo
@@ -205,8 +238,32 @@
       .navbar-form-search
         margin-right: 89px
         margin-bottom: 0
+        margin-top: 0
 
       .btnCart
         margin: 0
+      &.fixed
+        position: fixed
+        top: 0
+        height: 55px
+        min-height: 55px
+        z-index: 2222
+        .dropDownTopMenu
+          display: flex
+
+
+
+
+        .flexB
+          padding: 5px 0
+          justify-content: space-between
+        .navbar-form-search
+          margin: 0
+        .logo
+          width: 143px
+          margin-right: 50px
+        .loginBtn
+          display: none
+
 
 

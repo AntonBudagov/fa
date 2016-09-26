@@ -82,8 +82,12 @@
   background-color: white;
   box-shadow: 0 0 4px rgba(17, 16, 16, 0.1)
   right: 0
-  top: 81px
+  top: 54px
+  left: -50%
   #wrappScroll
+    width: 100%
+    max-height: 175px
+    height: 100%
     // overflow: hidden
     // height: 184px
   .contentSmallPopupCart
@@ -125,3 +129,23 @@
       display: block
       +sprite($close-green)
 
+
+.hoverCart
+  position: relative
+
+
+  &:hover
+    .smallPopupCartScrool
+      opacity: 1
+      display: block
+
+
+@media #{$medium}
+  .smallPopupCartScrool
+    top: 36px
+    left: auto
+  .hoverCart
+    height: 40px
+  .header .middle .hoverCart
+    .btnCart
+      margin: 4px 0 0 0

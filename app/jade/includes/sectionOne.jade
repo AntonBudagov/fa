@@ -1,16 +1,62 @@
 mixin sectionOne
   .sectionOne
     .wrappContent
-      .wrappPhoto
-        .infoSectionOne
-          .date 1 МАЯ - 31 ДЕКАБРЯ
-          h2.actionText Новое поступление
-          h2.nameProduct Витаминов и БАД
-          .desc Самое время поднимать iммунитет!
-          a.btn.btnMore(href="#")
-            span ПОДРОБНЕЕ
-            i.icon.icon-show-more
-        .groupCard
+      #sync1.owl-carousel
+        .wrappPhoto
+          .photosectionOne
+            .wrappImg
+              img(src="images/upload/sectionOne/doctor_w_1.png", alt="")
+          .infoSectionOne
+            .date 1 МАЯ - 31 ДЕКАБРЯ
+            h2.actionText Новое поступление
+            h2.nameProduct Витаминов и БАД
+            .desc Самое время поднимать iммунитет!
+            a.btn.btnMore(href="#")
+              span ПОДРОБНЕЕ
+              i.icon.icon-show-more
+        .wrappPhoto
+          .photosectionOne
+            .wrappImg
+              img(src="images/upload/sectionOne/slide1.png", alt="")
+          .infoSectionOne
+            .date 17 МАЯ
+            h2.actionText Десткий праздник в аптеках Фармия
+            a.btn.btnMore(href="#")
+              span ПОДРОБНЕЕ
+              i.icon.icon-show-more
+        .wrappPhoto
+          .photosectionOne
+            .wrappImg
+              img(src="images/upload/sectionOne/present.png", alt="")
+          .infoSectionOne
+            .date 1 МАЯ - 31 ДЕКАБРЯ
+            h2.actionText Новое поступление
+            h2.nameProduct Витаминов и БАД
+            .desc Самое время поднимать iммунитет!
+            a.btn.btnMore(href="#")
+              span ПОДРОБНЕЕ
+              i.icon.icon-show-more
+        .wrappPhoto
+          .photosectionOne
+            .wrappImg
+              img(src="images/upload/sectionOne/slide3.png", alt="")
+          .infoSectionOne
+            .date 1 МАЯ - 31 ДЕКАБРЯ
+            h2.actionText Новое поступление
+            h2.nameProduct Витаминов и БАД
+            .desc Самое время поднимать iммунитет!
+            a.btn.btnMore(href="#")
+              span ПОДРОБНЕЕ
+              i.icon.icon-show-more
+
+      .groupCard
+        #sync2.owl-carousel
+          .card
+            .wrappImg
+              img(src="images/upload/sectionOne/doctor_w_1.png", alt="Новое поступление Витаминов и БАД")
+            .descCard
+              .date 1 МАЯ - 31 ДЕКАБРЯ
+              a.desc(href="#") Новое поступление Витаминов и БАД
           .card
             .wrappImg
               img(src="images/upload/sectionOne/kids.png", alt="Десткий праздник в аптеках Фармия")
@@ -29,6 +75,9 @@ mixin sectionOne
             .descCard
               .date 21 Мая
               a.desc(href="#") Проверить здоровье в аптеке Фармия
+
+
+
 
     .brendLineYellow
       .wrappContent.flexB

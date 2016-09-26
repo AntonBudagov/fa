@@ -1,7 +1,7 @@
 .modal
   border-radius: 0
   width: 100%
-  // min-height: 100%
+  min-height: 100%
   transform: translateY(-10%) scale(1)!important
   top: 10%!important
   h4
@@ -27,7 +27,7 @@
   .inputWrapp
     padding-top: 20px
     position: relative
-    .error
+    .help-block
       display: none
       position: absolute
       color: red
@@ -88,13 +88,13 @@
       margin-bottom: 20px
 
   .registration,
-  .sigin,
+  .signIn,
   .forgotPwd
     position: absolute
     opacity: 0
     visibility: hidden
-    transition: .35s all
-    transform: scale(.7)
+    // transition: .35s all
+    // transform: scale(.7)
     &.active
       transform: scale(1)
       position: relative
@@ -250,6 +250,7 @@
 
 @media #{$medium}
   .modal
+    min-height: auto
     h4
       padding-bottom: 15px
   .modalCallBack

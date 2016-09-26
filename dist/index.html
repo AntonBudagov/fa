@@ -7,7 +7,8 @@
     <meta content="width=device-width" name="viewport">
     <meta content="#fff" name="msapplication-TileColor">
     <meta content="#fff" name="theme-color">
-    <link rel="stylesheet" href="lib/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.transitions.min.css">
     <link rel="stylesheet" href="lib/simplebar/simplebar.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Page Index</title>
@@ -33,6 +34,7 @@
       </div>
       <div class="middle">
         <div class="wrappContent flexB"><a href="#" class="logo"><img src="images/logo.jpg" alt="Фармия"/></a>
+          <div class="dropDown dropDownTopMenu"><span>Каталог товаров</span><i class="iocn icon-arrow-down-black"></i></div>
           <form role="search" class="navbar-form-search">
             <input id="search" type="text" placeholder="Введите название лекарства (поиск по 30 000 товарам)" name="search"/>
             <button type="submit" class="btn btnSearch">
@@ -41,58 +43,51 @@
             <div class="searchContent">
               <div class="wrpappSearchContent">
                 <div class="title">Товары</div>
-                <div class="scrollSeacrh simplebar">
-                  <div class="nameSerch"><span>Анальгин таблетки 500 мг, 10 шт.</span><span>1456.69 руб.</span></div>
-                  <div class="nameSerch"><span>Анальгин таблетки 500 мг, 10 шт.</span><span>1456.69 руб.</span></div>
-                  <div class="nameSerch"><span>Анальгин таблетки 500 мг, 10 шт.</span><span>1456.69 руб.</span></div>
-                  <div class="nameSerch"><span>Анальгин таблетки 500 мг, 10 шт.</span><span>1456.69 руб.</span></div>
-                  <div class="nameSerch"><span>Анальгин таблетки 500 мг, 10 шт.</span><span>1456.69 руб.</span></div>
-                </div>
+                <div data-simplebar-direction="vertical" class="scrollSeacrh"><a href="#" class="nameSerch"><span>Анальгин таблетки 500 мг, 10 шт.</span><span>1456.69 руб.</span></a><a href="#" class="nameSerch"><span>Анальгин таблетки 500 мг, 10 шт.</span><span>1456.69 руб.</span></a><a href="#" class="nameSerch"><span>Анальгин таблетки 500 мг, 10 шт.</span><span>1456.69 руб.</span></a><a href="#" class="nameSerch"><span>Анальгин таблетки 500 мг, 10 шт.</span><span>1456.69 руб.</span></a><a href="#" class="nameSerch"><span>Анальгин таблетки 500 мг, 10 шт.</span><span>1456.69 руб.</span></a></div>
                 <div class="title">Статьи</div>
-                <div class="scrollSeacrh simplebar">
-                  <div class="nameSerch"><span>Название статьи бла бла бла</span></div>
-                  <div class="nameSerch"><span>Название другой статьи бла бла бла бла</span></div>
-                </div>
+                <div data-simplebar-direction="vertical" class="scrollSeacrh"><a href="#" class="nameSerch"><span>Название статьи бла бла бла</span></a><a href="#" class="nameSerch"><span>Название другой статьи бла бла бла бла</span></a></div>
               </div>
             </div>
           </form>
           <div href="#modal2" class="btn loginBtn modal-trigger">войти</div>
-          <div class="btn btnCart"><i class="icon icon-cart"></i><span>корзина</span>
-          </div>
-          <div class="smallPopupCartScrool">
-            <div id="wrappScroll" class="simplebar">
-              <div class="contentSmallPopupCart">
-                <div class="wrappSmallPopupCart">
-                  <div class="wrappImg"><img src="images/upload/products/p3.png" alt=""/></div>
-                  <div class="desc"><span class="name">Синафлан линимент 0,025%</span><span class="price">192 руб.</span></div>
-                  <div class="delete"><i class="icon icon-close"></i></div>
-                </div>
-              </div>
-              <div class="contentSmallPopupCart">
-                <div class="wrappSmallPopupCart">
-                  <div class="wrappImg"><img src="images/upload/products/p3.png" alt=""/></div>
-                  <div class="desc"><span class="name">Синафлан линимент 0,025%</span><span class="price">192 руб.</span></div>
-                  <div class="delete"><i class="icon icon-close"></i></div>
-                </div>
-              </div>
-              <div class="contentSmallPopupCart">
-                <div class="wrappSmallPopupCart">
-                  <div class="wrappImg"><img src="images/upload/products/p3.png" alt=""/></div>
-                  <div class="desc"><span class="name">Синафлан линимент 0,025%</span><span class="price">192 руб.</span></div>
-                  <div class="delete"><i class="icon icon-close"></i></div>
-                </div>
-              </div>
-              <div class="contentSmallPopupCart">
-                <div class="wrappSmallPopupCart">
-                  <div class="wrappImg"><img src="images/upload/products/p3.png" alt=""/></div>
-                  <div class="desc"><span class="name">Синафлан линимент 0,025%</span><span class="price">192 руб.</span></div>
-                  <div class="delete"><i class="icon icon-close"></i></div>
-                </div>
-              </div>
+          <div class="hoverCart">
+            <div class="btn btnCart"><i class="icon icon-cart"></i><span>корзина</span>
             </div>
-            <div class="footerSmallPopupCartScrool">
-              <div class="btn catBtn">перейти в корзину</div>
-              <div class="btn checkoutBtn">Оформить заказ</div>
+            <div class="smallPopupCartScrool">
+              <div id="wrappScroll" data-simplebar-direction="vertical">
+                <div class="contentSmallPopupCart">
+                  <div class="wrappSmallPopupCart">
+                    <div class="wrappImg"><img src="images/upload/products/p3.png" alt=""/></div>
+                    <div class="desc"><span class="name">Синафлан линимент 0,025%</span><span class="price">192 руб.</span></div>
+                    <div class="delete"><i class="icon icon-close"></i></div>
+                  </div>
+                </div>
+                <div class="contentSmallPopupCart">
+                  <div class="wrappSmallPopupCart">
+                    <div class="wrappImg"><img src="images/upload/products/p3.png" alt=""/></div>
+                    <div class="desc"><span class="name">Синафлан линимент 0,025%</span><span class="price">192 руб.</span></div>
+                    <div class="delete"><i class="icon icon-close"></i></div>
+                  </div>
+                </div>
+                <div class="contentSmallPopupCart">
+                  <div class="wrappSmallPopupCart">
+                    <div class="wrappImg"><img src="images/upload/products/p3.png" alt=""/></div>
+                    <div class="desc"><span class="name">Синафлан линимент 0,025%</span><span class="price">192 руб.</span></div>
+                    <div class="delete"><i class="icon icon-close"></i></div>
+                  </div>
+                </div>
+                <div class="contentSmallPopupCart">
+                  <div class="wrappSmallPopupCart">
+                    <div class="wrappImg"><img src="images/upload/products/p3.png" alt=""/></div>
+                    <div class="desc"><span class="name">Синафлан линимент 0,025%</span><span class="price">192 руб.</span></div>
+                    <div class="delete"><i class="icon icon-close"></i></div>
+                  </div>
+                </div>
+              </div>
+              <div class="footerSmallPopupCartScrool">
+                <div class="btn catBtn">перейти в корзину</div>
+                <div class="btn checkoutBtn">Оформить заказ</div>
+              </div>
             </div>
           </div>
           <div class="smallPopupCart">
@@ -287,14 +282,14 @@
       <div class="modal-content">
         <h4>Заказать звонок</h4>
         <div class="inputWrapp">
-          <div class="error">Не указанно имя!</div>
+          <div class="help-block">Не указанно имя!</div>
           <input type="text" placeholder="Ваше имя" name="name"/>
         </div>
         <div class="inputWrapp">
-          <div class="error active">Не указан телефон!</div>
+          <div class="help-block active">Не указан телефон!</div>
           <input type="tel" placeholder="Телефон" name="tel" class="error-input"/>
         </div>
-        <input type="submit" class="btn"/>
+        <input type="submit" value="отправить" class="btn"/>
       </div>
     </div>
     <div id="modal2" class="modal modalLoginForm">
@@ -307,19 +302,19 @@
         <div class="leftModalContent registration active">
           <h4>Регистрация на сайте</h4>
           <div class="inputWrapp">
-            <div class="error">Не указанно имя!</div>
+            <div class="help-block">Не указанно имя!</div>
             <input type="text" placeholder="Ваше имя" name="name"/>
           </div>
           <div class="inputWrapp">
-            <div class="error active">Не указан телефон!</div>
+            <div class="help-block active">Не указан телефон!</div>
             <input type="tel" placeholder="Телефон" name="tel" class="error-input"/>
           </div>
           <div class="inputWrapp">
-            <div class="error active">Не указан email!</div>
+            <div class="help-block active">Не указан email!</div>
             <input type="email" placeholder="Email" name="email" class="error-input"/>
           </div>
           <div class="inputWrapp">
-            <div class="error">пароль слишком короткий!</div>
+            <div class="help-block">пароль слишком короткий!</div>
             <input type="password" placeholder="Пароль" name="pwd" class="error-input"/>
           </div>
           <div class="checkedGroup">
@@ -328,7 +323,7 @@
             <div class="qw">?</div>
           </div>
           <div class="inputWrapp">
-            <div class="error">пароль слишком короткий!</div>
+            <div class="help-block">пароль слишком короткий!</div>
             <input type="text" placeholder="Пин-код специалиста" name="pinkod"/>
           </div>
           <div class="footerModal">
@@ -338,16 +333,16 @@
             </div>
           </div>
         </div>
-        <div class="leftModalContent sigin">
+        <div class="leftModalContent signIn">
           <h4>Авторизация на сайте</h4>
           <div class="inputWrapp">
             <lable class="brendLable">Email или телефон</lable>
-            <div class="error">Не указанно имя!</div>
+            <div class="help-block">Не указанно имя!</div>
             <input type="text" placeholder="+7" name="name"/>
           </div>
           <div class="inputWrapp">
             <lable class="brendLable">Пароль</lable>
-            <div class="error">пароль слишком короткий!</div>
+            <div class="help-block">пароль слишком короткий!</div>
             <input type="password" placeholder="Пароль" name="pwd"/>
           </div><a href="#" class="link fogotPassword">Забыли пароль?</a>
           <input type="submit" value="войти" class="btn loginBtn"/>
@@ -356,7 +351,7 @@
           <h4>Восстановление пароля</h4>
           <div class="inputWrapp">
             <lable class="brendLable">Email или телефон</lable>
-            <div class="error">Не указан email!</div>
+            <div class="help-block">Не указан email!</div>
             <input type="email" placeholder="Email" name="email"/>
           </div>
           <input type="submit" value="отправить" class="btn registerBtn"/>
@@ -380,14 +375,58 @@
     </div>
     <div class="sectionOne">
       <div class="wrappContent">
-        <div class="wrappPhoto">
-          <div class="infoSectionOne">
-            <div class="date">1 МАЯ - 31 ДЕКАБРЯ</div>
-            <h2 class="actionText">Новое поступление</h2>
-            <h2 class="nameProduct">Витаминов и БАД</h2>
-            <div class="desc">Самое время поднимать iммунитет!</div><a href="#" class="btn btnMore"><span>ПОДРОБНЕЕ</span><i class="icon icon-show-more"></i></a>
+        <div id="sync1" class="owl-carousel">
+          <div class="wrappPhoto">
+            <div class="photosectionOne">
+              <div class="wrappImg"><img src="images/upload/sectionOne/doctor_w_1.png" alt=""/></div>
+            </div>
+            <div class="infoSectionOne">
+              <div class="date">1 МАЯ - 31 ДЕКАБРЯ</div>
+              <h2 class="actionText">Новое поступление</h2>
+              <h2 class="nameProduct">Витаминов и БАД</h2>
+              <div class="desc">Самое время поднимать iммунитет!</div><a href="#" class="btn btnMore"><span>ПОДРОБНЕЕ</span><i class="icon icon-show-more"></i></a>
+            </div>
           </div>
-          <div class="groupCard">
+          <div class="wrappPhoto">
+            <div class="photosectionOne">
+              <div class="wrappImg"><img src="images/upload/sectionOne/slide1.png" alt=""/></div>
+            </div>
+            <div class="infoSectionOne">
+              <div class="date">17 МАЯ</div>
+              <h2 class="actionText">Десткий праздник в аптеках Фармия</h2><a href="#" class="btn btnMore"><span>ПОДРОБНЕЕ</span><i class="icon icon-show-more"></i></a>
+            </div>
+          </div>
+          <div class="wrappPhoto">
+            <div class="photosectionOne">
+              <div class="wrappImg"><img src="images/upload/sectionOne/present.png" alt=""/></div>
+            </div>
+            <div class="infoSectionOne">
+              <div class="date">1 МАЯ - 31 ДЕКАБРЯ</div>
+              <h2 class="actionText">Новое поступление</h2>
+              <h2 class="nameProduct">Витаминов и БАД</h2>
+              <div class="desc">Самое время поднимать iммунитет!</div><a href="#" class="btn btnMore"><span>ПОДРОБНЕЕ</span><i class="icon icon-show-more"></i></a>
+            </div>
+          </div>
+          <div class="wrappPhoto">
+            <div class="photosectionOne">
+              <div class="wrappImg"><img src="images/upload/sectionOne/slide3.png" alt=""/></div>
+            </div>
+            <div class="infoSectionOne">
+              <div class="date">1 МАЯ - 31 ДЕКАБРЯ</div>
+              <h2 class="actionText">Новое поступление</h2>
+              <h2 class="nameProduct">Витаминов и БАД</h2>
+              <div class="desc">Самое время поднимать iммунитет!</div><a href="#" class="btn btnMore"><span>ПОДРОБНЕЕ</span><i class="icon icon-show-more"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="groupCard">
+          <div id="sync2" class="owl-carousel">
+            <div class="card">
+              <div class="wrappImg"><img src="images/upload/sectionOne/doctor_w_1.png" alt="Новое поступление Витаминов и БАД"/></div>
+              <div class="descCard">
+                <div class="date">1 МАЯ - 31 ДЕКАБРЯ</div><a href="#" class="desc">Новое поступление Витаминов и БАД</a>
+              </div>
+            </div>
             <div class="card">
               <div class="wrappImg"><img src="images/upload/sectionOne/kids.png" alt="Десткий праздник в аптеках Фармия"/></div>
               <div class="descCard">
@@ -718,11 +757,11 @@
         <div class="textInfo">Скидки для подписчиков</div>
         <div class="inputWrapp">
           <input type="text" placeholder="Как Вас зовут?"/>
-          <div class="error">Error</div>
+          <div class="help-block">Error</div>
         </div>
         <div class="inputWrapp">
           <input type="email" placeholder="Ваш e-mail"/>
-          <div class="error">Error</div>
+          <div class="help-block">Error</div>
         </div>
         <div class="btn btnBlue">ПОДПИСАТЬСЯ</div>
       </div>
@@ -785,7 +824,7 @@
       </div>
     </footer>
     <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
-    <script src="lib/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
     <script src="lib/simplebar/simplebar.min.js"></script>
     <script src="lib/materialize/js/velocity.min.js"></script>
     <script src="lib/materialize/js/leanModal.js"></script>
