@@ -83,16 +83,16 @@
 
   }
   // slider------------------------------------------------------------------
-  // var sliderReclama;
-  //   sliderReclama = {
-  //     navigation : false,
-  //     slideSpeed : 300,
-  //     paginationSpeed : 400,
-  //     singleItem: true,
-  //     autoPlay: true
-  //   };
+  var sliderReclama;
+    sliderReclama = {
+      navigation : false,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem: true,
+      autoPlay: true
+    };
 
-  // $('.sliderReclama').owlCarousel(sliderReclama);
+  $('.sliderReclama').owlCarousel(sliderReclama);
 
 })(window);
 

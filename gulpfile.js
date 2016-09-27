@@ -164,8 +164,13 @@ gulp.task('bower', function() {
       "materialize": {
         main: ["./js/leanModal.js", "./**/velocity.min.js"]
       },
+      // ver. 2.1.6
       "owl.carousel":{
         main: ["./dist/*.min.js", "./dist/assets/*.min.css", "./dist/assets/*.gif"]
+      },
+      // ver. 1.3.2
+      "OwlCarousel":{
+        main: ["./owl-carousel/*.min.js", "./owl-carousel/*.css", "./owl-carousel/*.gif", "./owl-carousel/*.png"]
       }
     }
   })).pipe(gulp.dest('dist/lib'));
