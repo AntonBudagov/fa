@@ -1,0 +1,66 @@
+extends templates/template
+block title
+    title Page Index2
+block content
+  +header
+
+  main
+    .indexTwo.wrappContent
+      .baner
+        img(src="", alt="baner")
+
+      .contentProduct
+        .leftSidBar
+
+          .acardionFarmia
+            ul
+              li.dropDown
+                h3
+                  a(href='#') Каталог товаров
+                ul
+                  li
+                    form(action='#')
+                      p
+                        input#test1(name='group1', type='radio')
+                        label(for='test1') Red
+                      p
+                        input#test2(name='group1', type='radio')
+                        label(for='test2') Yellow
+                      p
+                        input#test3.with-gap(name='group1', type='radio')
+                        label(for='test3') Green
+                      p
+                        input#test4(name='group1', type='radio', disabled='disabled')
+                        label(for='test4') Brown
+
+              li.dropDown
+                h3
+                  a(href='#') Производители
+                ul
+                  form(action='#')
+                    p
+                      input#test5(type='checkbox')
+                      label(for='test5') Red
+                    p
+                      input#test6(type='checkbox', checked='checked')
+                      label(for='test6') Yellow
+                    p
+                      input#filled-in-box.filled-in(type='checkbox', checked='checked')
+                      label(for='filled-in-box') Filled in
+                    p
+                      input#indeterminate-checkbox(type='checkbox')
+                      label(for='indeterminate-checkbox') Indeterminate Style
+                    p
+                      input#test7(type='checkbox', checked='checked', disabled='disabled')
+                      label(for='test7') Green
+                    p
+                      input#test8(type='checkbox', disabled='disabled')
+                      label(for='test8') Brown
+
+
+        .products
+          +product
+      +pagination
+
+  +footer
+

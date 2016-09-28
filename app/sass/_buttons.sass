@@ -85,19 +85,21 @@
       +sprite($cart-white)
 
 .btnSearch
-  width: 94px
+  min-width: 94px
   height: 32px
   border: 1px solid #0145a9
   border-radius: 0 4px 4px 0
   display: flex
   align-items: center
   position: relative
+  padding: 0
   .group-btn
     display: flex
-    align-items: center
+    align-items: flex-start
     width: 100%
   .icon-search
-    margin: 0 8px 0 4px
+    margin: 8px 8px 0 4px
+    display: table
     +sprite($search)
   &:hover
     background-color: #fff
@@ -131,7 +133,7 @@
   text-transform: uppercase
   cursor: pointer
   text-decoration: none
-  letter-spacing: 2px
+  letter-spacing: 1px
   transition: all .35s
   &:hover
     background-color: #0145a9

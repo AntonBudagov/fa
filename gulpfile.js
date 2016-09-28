@@ -171,6 +171,9 @@ gulp.task('bower', function() {
       // ver. 1.3.2
       "OwlCarousel":{
         main: ["./owl-carousel/*.min.js", "./owl-carousel/*.css", "./owl-carousel/*.gif", "./owl-carousel/*.png"]
+      },
+      "paginationjs":{
+        main: ["./**/*.min.js", "./**/*.css"]
       }
     }
   })).pipe(gulp.dest('dist/lib'));

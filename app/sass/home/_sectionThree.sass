@@ -22,6 +22,7 @@
     align-items: center
     flex-direction: column
     padding: 0 20px
+
     .icon-timer
       +sprite($timer)
     .icon-bag-like-plus
@@ -146,14 +147,13 @@
     margin-top: 31px
     justify-content: space-between
     max-width: 1204px
-    .textRebiew
+    .textReview
       width: 100%
-      max-width: 547px
+
       padding-bottom: 34px
       &:last-child
         padding-bottom: 0
-      &:nth-last-child(2)
-        padding-bottom: 0
+
     .headTextRebiew
       display: flex
       align-items: center
@@ -240,7 +240,7 @@
   background-color: #fff
   min-height: 103px
   .flexB
-    justify-content: center
+    justify-content: space-between
   .mail
     width: 75px
     height: 75px
@@ -291,20 +291,12 @@
   .brendDefaultLine
     .briefInfo
       flex-direction: row
-      padding: 0
+      padding: 20px 0
       .desc
         max-width: 210px
         margin: 0 0 0 20px
         text-align: left
-  // News And Posts
-  // .newsPosts
-  //   .news
-  //     .newContet
-  //       flex-direction: row
-  //       .wrappImg
-  //         max-width: 200px
-  //         max-height: 200px
-  //         margin: 0 23px 0 0
+
 
 
 @media #{$medium}
@@ -315,7 +307,8 @@
     padding: 92px 0 0 20px
     justify-content: flex-start
     .briefInfo
-
+      max-width: none
+      width: auto
       margin-bottom: 0
       &:first-child
         margin-right: 81px
@@ -336,6 +329,11 @@
 
   .review
     padding-top: 52px
+    .wrappReview
+      .textReview
+        &:nth-last-child(2)
+          padding-bottom: 0
+
 
   // News And Posts
   .newsPosts
@@ -354,11 +352,11 @@
 
   .brendWhiteLine
     justify-content: flex-start
-    padding: 14px 0
+    padding: 14px 35px
     .mail
-      margin: 0 30px 0 35px
+      margin: 0 30px 0 0px
     .textInfo
-      max-width: 390px
+      max-width: 450px
       margin: 0 24px 0 0
       text-align: left
     .inputWrapp
@@ -374,6 +372,16 @@
     .contentAboutPharmacy
       margin-top: 30px
 
+
+@media #{$xMedium}
+  .review
+    .wrappReview
+      .textReview
+        max-width: 547px
+
+  .brendWhiteLine
+    .textInfo
+      max-width: 390px
 
 
 

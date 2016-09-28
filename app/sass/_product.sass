@@ -1,3 +1,7 @@
+$line-height: 1
+$lines-to-show: 2
+$font-size: 15px
+
 .products
   display: flex
   justify-content: space-around
@@ -10,7 +14,6 @@
     height: 440px
     background-color: white
     padding: 37px 20px 37px 20px
-
     margin: 0 5px 20px 5px
     will-change: auto
     transition: all .35s ease-in-out
@@ -18,16 +21,16 @@
     cursor: pointer
     &:nth-child(5n)
       margin-right: 0
-    &:hover
-      transform: scale(1.04)
-      .wrappImg
-        transform: scale(1.1)
-      .btnBuy
-        opacity: 1
-        visibility: visible
-      .priceGroup
-        opacity: 0
-        visibility: hidden
+    // &:hover
+    //   transform: scale(1.04)
+    //   .wrappImg
+    //     transform: scale(1.1)
+    //   .btnBuy
+    //     opacity: 1
+    //     visibility: visible
+    //   .priceGroup
+    //     opacity: 0
+    //     visibility: hidden
     .stickerNew
       position: absolute
       top: 10px
@@ -54,14 +57,18 @@
       margin-bottom: 16px
 
     .description
-      height: 32px
       color: #222
       font-family: $defaultFont
-      font-size: 15px
+      font-size: $font-size
       font-weight: 600
-      line-height: 18px
-      overflow: hidden
+      line-height: 1
       margin-bottom: 66px
+      height: $font-size*$line-height*$lines-to-show
+      -webkit-line-clamp: $lines-to-show
+      display: block; /* Fallback for non-webkit */
+      display: -webkit-box;
+      +text-overflow-multiline
+
 
     .wrappImg
       text-align: center
@@ -75,14 +82,18 @@
 
 
   .product
+    .btnBuy
+      opacity: 1
+      visibility: visible
     .priceGroup
       display: flex
       position: absolute
       bottom: 38px
-      opacity: 1
-      visibility: visible
+      opacity: 0
+      visibility: hidden
       letter-spacing: 1px
       left: 25px
+
       .newPrice
         color: #009110
         font-family: $defaultFont
@@ -111,3 +122,19 @@
     justify-content: flex-start
     .product
       margin: 0 20px 20px 0px
+      .priceGroup
+        visibility: visible
+        opacity: 1
+      .btnBuy
+        visibility: hidden
+        opacity: 0
+      &:hover
+        transform: scale(1.04)
+        .wrappImg
+          transform: scale(1.1)
+        .btnBuy
+          opacity: 1
+          visibility: visible
+        .priceGroup
+          opacity: 0
+          visibility: hidden

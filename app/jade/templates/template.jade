@@ -6,6 +6,10 @@ include ../includes/sectionTwo
 include ../includes/sectionThree
 include ../includes/footer
 //-
+include ../includes/pagination
+- var HOMEPAGE = false;
+- var Product = true;
+
 doctype html
 html
   head
@@ -19,9 +23,11 @@ html
     //- Vendor css
     //- ========================================================================
     //- link(rel='stylesheet' href='lib/owl.carousel/dist/assets/owl.carousel.min.css')
+    //- Home page
     link(rel='stylesheet' href='lib/OwlCarousel/owl-carousel/owl.carousel.css')
-
     link(rel='stylesheet' href='lib/simplebar/simplebar.css')
+    //- other page
+    link(rel='stylesheet' href='lib/paginationjs/dist/pagination.css')
     //- ========================================================================
     //- Main css
     //- ========================================================================
@@ -35,6 +41,10 @@ html
     //- Vendor js============================
     script(type="text/javascript" src="lib/jquery/dist/jquery.min.js")
     script(type="text/javascript" src="lib/OwlCarousel/owl-carousel/owl.carousel.min.js")
+
+
+    script(type="text/javascript" src="lib/paginationjs/dist/pagination.min.js")
+
 
     //- script(src="lib/owl.carousel/dist/owl.carousel.min.js")
     script(src="lib/simplebar/simplebar.min.js")

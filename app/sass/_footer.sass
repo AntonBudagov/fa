@@ -6,6 +6,7 @@
     display: flex
     justify-content: space-between
     flex-wrap: wrap
+    position: relative
   .menuFooter
 
     display: flex
@@ -90,10 +91,13 @@
 
 
 .social
+  position: absolute
+  right: 20px
   a
     margin: 0 10px
 
   h5
+    display: none
     color: #222;
     font-family: $defaultFont;
     font-size: 15px;
@@ -103,6 +107,9 @@
 
   .flexB
     justify-content: flex-start
+    flex-direction: column
+    align-items: flex-end
+
 
   .icon
     display: block
@@ -120,6 +127,25 @@
 .icon-tw
   +sprite($twitter-logo-button)
 
+@media #{$xSmall}
+  .footer
+    .social
+        position: relative
+        max-width: 177px
+        margin: 0 32px
+        a
+          margin: auto
+        h5
+          display: block
+          padding-bottom: 27px
+        .flexB
+          justify-content: space-between
+          flex-direction: row
+    // .social
+    //   width: 135px
+    //   .flexB
+    //     justify-content: space-between
+    //     flex-direction: row
 
 @media #{$medium}
   .footer
@@ -138,18 +164,20 @@
           margin: 0 169px 0 106px
       li
         &:first-child
-          padding-top: 21px
-
+          // padding-top: 21px
     .social
+        position: relative
+        max-width: 177px
+        margin: 0 72px
+        a
+          margin: auto
+        h5
+          display: block
+          padding-bottom: 27px
+        .flexB
+          justify-content: space-between
+          flex-direction: row
 
-      max-width: 177px
-      margin: 0 72px
-      a
-        margin: auto
-      h5
-        padding-bottom: 27px
-      .flexB
-        justify-content: space-between
 
 
     .contact

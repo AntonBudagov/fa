@@ -1,7 +1,7 @@
 (function (appl) {
   'use strict';
 
-  console.log('mai1n.js');
+  console.log('main.js');
 
 // -----------------------------------------------------------------------------
 // drodDown
@@ -10,7 +10,7 @@
 $(document).click(function(){
 
   $(".wrappDropDown").hide();
-  $('.catalogProductsMenu').hide();
+  // $('.catalogProductsMenu').hide();
   $('.smallPopupCart').hide();
 
   if ($('.dropDownCity, .wrappMenu .dropDown').hasClass('active')){
@@ -24,13 +24,32 @@ $(".dropDownCity").click(function(e){
   e.stopPropagation();
 });
 // drodDownMenu
-   $('.wrappMenu .dropDown, .dropDownTopMenu').click(function(e){
-     $(this).addClass('active');
+var overlay = $('.overlayDropDown');
 
+  $('.wrappMenu .dropDown, .dropDownTopMenu').click(function(e){
+    $(this).addClass('active');
     $('.catalogProductsMenu').show();
-    e.stopPropagation();
-  });
+    overlay.addClass('active');
 
+  });
+   $('.has-sub').hover(function(e){
+
+      $('.has-sub').removeClass('active');
+      $(this).addClass('active');
+      $('.wrapp-ul').removeClass('active')
+      $(this).find('.wrapp-ul').addClass('active')
+      $('.catalogProductsMenu').height($(this).find('.wrapp-ul').height());
+
+      console.log($(this).find('.wrapp-ul').height())
+
+   })
+
+  overlay.click(function(){
+
+    $(this).removeClass('active')
+    $('.catalogProductsMenu').hide()
+
+    });
 
   // ----------
   $('.contentDropDown a').click(function(){
@@ -154,23 +173,75 @@ $(".dropDownCity").click(function(e){
   // $(".burger-menu").click(function () {
   //   $(this).toggleClass("menu-on");
   // });
+   $("#accordian a").click(function() {
+    var link = $(this);
+    var closest_ul = link.closest("ul");
+    var parallel_active_links = closest_ul.find(".active")
+    var closest_li = link.closest("li");
+    var link_status = closest_li.hasClass("active");
+    var count = 0;
 
-  // $("#accordian a").click(function() {
-  //   var link = $(this);
-  //   var closest_ul = link.closest("ul");
-  //   var parallel_active_links = closest_ul.find(".active")
-  //   var closest_li = link.closest("li");
-  //   var link_status = closest_li.hasClass("active");
-  //   var count = 0;
+    closest_ul.find("ul").slideUp(function() {
+        if (++count == closest_ul.find("ul").length)
+            parallel_active_links.removeClass("active");
+    });
 
-  //   closest_ul.find("ul").slideUp(function() {
-  //       if (++count == closest_ul.find("ul").length)
-  //           parallel_active_links.removeClass("active");
-  //   });
+    if (!link_status) {
+        closest_li.children("ul").slideDown();
+        closest_li.addClass("active");
+    }
+  });
 
-  //   if (!link_status) {
-  //       closest_li.children("ul").slideDown();
-  //       closest_li.addClass("active");
-  //   }
-  // });
+  $(".acardionFarmia a").click(function() {
+    var link = $(this);
+    var closest_ul = link.closest("ul");
+    var parallel_active_links = closest_ul.find(".active")
+    var closest_li = link.closest("li");
+    var link_status = closest_li.hasClass("active");
+    var count = 0;
+
+    closest_ul.find("ul").slideUp(function() {
+        if (++count == closest_ul.find("ul").length)
+            parallel_active_links.removeClass("active");
+    });
+
+    if (!link_status) {
+        closest_li.children("ul").slideDown();
+        closest_li.addClass("active");
+    }
+  });
+
+/*
+--------------------------------------------------------------------------------
+  pagination
+--------------------------------------------------------------------------------
+*/
+  function simpleTemplating(data) {
+      var html = '<ul>';
+      $.each(data, function(index, item){
+          html += '<li>'+ item +'</li>';
+      });
+      html += '</ul>';
+      return html;
+  }
+    // var sources = function () {
+
+    // }();
+//   $('#pagination-container').pagination({
+//     dataSource: (function(){
+//       var result = [];
+//       for (var i = 1; i < 196; i++) {
+//           result.push(i);
+//       }
+//       return result;
+//     })(),
+//     prevText: '<< назад ',
+//     nextText: ' вперед >>',
+//     pageSize: 1,
+//     callback: function(data, pagination) {
+//         var html = simpleTemplating(data);
+//         $('#data-container').html(html);
+//     }
+// })
+
 })(window);
