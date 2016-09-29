@@ -214,7 +214,7 @@ input:-ms-input-placeholder
 
 .wrappContent
   margin: 0 auto
-  max-width: 1231px
+  max-width: 1230px
   width: 100%
   padding: 0 20px
   @media #{$xMedium}
@@ -222,6 +222,7 @@ input:-ms-input-placeholder
 
 .linkDefault
   transition: color .35s
+  text-decoration: none
   span
     transition: color .35s
   &:hover
@@ -263,6 +264,14 @@ svg
 .simplebar-scroll-content
   width: 100%!important
 
+@keyframes photo
+  0%
+    transform: translateX(550px)
+    opacity: 0
+  100%
+    transform: translateX(0px)
+    opacity: 1
+
 @import _spritePng
 //fix hove
 // @import vendors/_mixin
@@ -278,6 +287,8 @@ svg
 @import _buttons
 @import _acardion
 @import _product
+@import _personal
+@import _review
 
 @import home/_sectionOne
 @import home/_sectionTwo

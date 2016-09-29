@@ -147,15 +147,26 @@
     //     justify-content: space-between
     //     flex-direction: row
 
-@media #{$medium}
-  .footer
 
+@media #{$tablet}
+  .footer
     .wrappFooter
       justify-content: flex-start
-
-
     .menuFooter
+      width: 100%
       justify-content: flex-start
+
+@media #{$tabletPartial}
+  .footer
+    .wrappFooter
+      justify-content: flex-start
+    .menuFooter
+      width: 100%
+      justify-content: flex-start
+
+@media #{$medium}
+  .footer
+    .menuFooter
       padding-bottom: 57px
       ul
         width: auto
@@ -177,8 +188,6 @@
         .flexB
           justify-content: space-between
           flex-direction: row
-
-
 
     .contact
       margin-bottom: 0px

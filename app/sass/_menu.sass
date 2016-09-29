@@ -128,23 +128,26 @@
       font-weight: 700
       line-height: 35px
       text-decoration: none
-      &:hover
-        color: #1f4ba5
+      // &:hover
+      //   color: #1f4ba5
 
     ul ul li
       margin-right: 80px
       float: left
-      margin-bottom: 15px
-      width: 262px
+      margin-bottom: 10px
+      width: 272px
+      padding: 5px
+      transition: background .22s
+      &:hover
+        background-color: #f2f2f2
     ul ul li a
       color: #222
       font-family: $defaultFont
       font-size: 15px
       font-weight: 600
       line-height: 18px
-      &:hover
-        color: #1f4ba5
-
+      // &:hover
+      //   color: #1f4ba5
 
   // acardion ==================================================================
   #accordian
@@ -217,83 +220,75 @@
         margin-top: 14px;
         right: 20px;
 
-  // burger---------------------------------------------------------------------
-  // .burger-menu
-  //   position: relative
-  //   width: 50px
-  //   height: 50px
-  //   cursor: pointer
+// burger---------------------------------------------------------------------
+.burger-menu
+  position: relative
+  width: 45px
+  height: 45px
+  cursor: pointer
+  position: absolute
+  left: 20px
+  top: 0
+  bottom: 0
+  margin: auto
 
-  // .burger
-  //   position: absolute
-  //   background: rgba(111, 111, 111, 1)
-  //   width: 100%
-  //   height: 10px
-  //   top: 50%
-  //   right: 0px
-  //   margin-top: -5px
-  //   opacity: 1
-  //   &::before
-  //     position: absolute
-  //     background: rgba(111, 111, 111, 1)
-  //     width: 50px
-  //     height: 10px
-  //     top: 20px
-  //     content: ""
-  //     display: block
-  //   &::after
-  //     position: absolute
-  //     background: rgba(111, 111, 111, 1)
-  //     width: 50px
-  //     height: 10px
-  //     bottom: 20px
-  //     content: ""
-  //     display: block
-  //     transition: all .3s ease-in-out
-  //     -webkit-transition: all .3s ease-in-out
-  //   &::before
-  //     transition: all .3s ease-in-out
-  //     -webkit-transition: all .3s ease-in-out
-  //   transition: all .3s ease-in-out
-  //   -webkit-transition: all .3s ease-in-out
+.burger
+  position: absolute
+  background: rgba(111, 111, 111, 1)
+  width: 100%
+  height: 5px
+  top: 50%
+  right: 0px
+  margin-top: -5px
+  opacity: 1
+  &::before
+    position: absolute
+    background: rgba(111, 111, 111, 1)
+    width: 100%
+    height: 5px
+    top: 15px
+    content: ""
+    display: block
+  &::after
+    position: absolute
+    background: rgba(111, 111, 111, 1)
+    width: 100%
+    height: 5px
+    bottom: 15px
+    content: ""
+    display: block
+    transition: all .1s ease-in-out
 
-  // .burger-menu
-  //   &.menu-on .burger
-  //     &::after
-  //       transform: rotate(-45deg)
-  //       -webkit-transform: rotate(-45deg)
-  //       bottom: 0px
-  //     &::before
-  //       transform: rotate(45deg)
-  //       -webkit-transform: rotate(45deg)
-  //       top: 0px
-  //     background: rgba(111, 111, 111, 0)
-  //   margin-left: auto
-  //   margin-right: auto
+  &::before
+    transition: all .1s ease-in-out
+
+  transition: all .1s ease-in-out
 
 
-@media #{$medium}
+.burger-menu
+  &.menu-on .burger
+    &::after
+      transform: rotate(-45deg)
+      -webkit-transform: rotate(-45deg)
+      bottom: 0px
+    &::before
+      transform: rotate(45deg)
+      -webkit-transform: rotate(45deg)
+      top: 0px
+    background: rgba(111, 111, 111, 0)
+
+
+
+@media #{$xMedium}
   .menu
     height: 60px
+    .wrappMenu
+      display: flex
+      justify-content: space-between;
     .catalogProductsMenu
       &.fixed
         position: fixed
         top: 55px
-    .burger-menu
-      display: none
-    .wrappMenu
-      display: flex
-      justify-content: space-between;
-      // justify-content: flex-start
-
-
-
-    #accordian
-      display: none
-
-@media #{$xMedium}
-  .menu
-    .catalogProductsMenu
       .wrapp-ul
         justify-content: space-between
         max-width: 1000px
@@ -308,3 +303,5 @@
         &:nth-of-type(3)
           margin-left: 20px
 
+    #accordian
+      display: none

@@ -9,6 +9,7 @@
     navigation: false,
     pagination: false,
     addClassActive: true,
+    autoHeight: true,
     afterAction : syncPosition,
     responsiveRefreshRate : 200
     // afterAction : function (elem) {
@@ -27,8 +28,8 @@
     items : 3,
     itemsDesktop      : [1199,3],
     itemsDesktopSmall     : [979,2],
-    itemsTablet       : [768,1],
-    itemsMobile       : [479,1],
+    itemsTablet       : [768,2],
+    itemsMobile       : false,
     pagination: false,
     responsiveRefreshRate : 100,
 
@@ -93,6 +94,32 @@
     };
 
   $('.sliderReclama').owlCarousel(sliderReclama);
+  // sliderPresone---------------------------------------------------------------
+  function mobile() {
+    var presonalWrapp = {
+      navigation : false,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem: true,
+    };
+    $('.presonalWrapp').owlCarousel(presonalWrapp);
+    var owl = $(".owl-carousel").data('owlCarousel');
+    var banner = $('.presonalWrapp');
+    var viewWindow = $( window ).width();
+
+    if(viewWindow > 480){
+      // owl.destroy();
+      if(typeof banner.data('owlCarousel') != 'undefined') {
+        banner.data('owlCarousel').destroy();
+        banner.removeClass('owl-carousel');
+      }
+    }
+
+  }
+  mobile();
+  $( window ).resize(function() {
+     mobile();
+  })
 
 })(window);
 

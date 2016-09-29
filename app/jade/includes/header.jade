@@ -1,8 +1,10 @@
 mixin header
   header.header
     .top
+      .burger-menu
+        .burger
+        i.icon.icon-cart
       .wrappContent.flexB
-
         .leftTop
           a.dropDownCity#dropDownCity
             .icon.icon-pin
@@ -40,7 +42,6 @@ mixin header
                 a(href="#") Воронеж
           a.linkTop(href="#") Самовывоз
           a.linkTop(href="#") Доставка
-
         .rightTop
           a.phone(href="tel:88007654556") 8 (800) 765 45 56
           a.link.modal-trigger(href="#modal1") Заказать звонок
@@ -80,9 +81,9 @@ mixin header
                   span 1456.69 руб.
               .title Статьи
               .scrollSeacrh(data-simplebar-direction="vertical")
-                 a.nameSerch(href="#")
+                 a.nameSerch.linkDefault(href="#")
                   span Название статьи бла бла бла
-                 a.nameSerch(href="#")
+                 a.nameSerch.linkDefault(href="#")
                   span Название другой статьи бла бла бла бла
 
 
@@ -131,8 +132,8 @@ mixin header
                   .delete
                     i.icon.icon-close
             .footerSmallPopupCartScrool
-              .btn.catBtn перейти в корзину
-              .btn.checkoutBtn Оформить заказ
+              a.btn.catBtn(href="#") перейти в корзину
+              a.btn.checkoutBtn(href="#") Оформить заказ
         .smallPopupCart
           .topSmallPopupCart
             .wrappSmallPopupCart

@@ -5,17 +5,14 @@
   .wrappContent
     padding: 0
   .wrappPhoto
-
     background-color: #f6f6f6
-    // background-image: url(../images/upload/sectionOne/doctor_w_1.png)
     background-repeat: no-repeat
-    // padding-bottom: 100%
-    background-position: bottom right
     height: auto
     display: flex
 
     .wrappImg
       text-align: center
+      width: 308px
   .photosectionOne
     position: absolute
     left: 0
@@ -24,7 +21,7 @@
     bottom: 0
     top: 0
     img
-      max-width: none
+      // max-width: none
 
   .infoSectionOne
     transform: translateX(550px)
@@ -84,7 +81,7 @@
 
   .groupCard
     margin: 0 auto
-    //display: none
+    display: none
     max-width: 1089px
     justify-content: space-between
     flex-direction: column
@@ -214,16 +211,59 @@
 @media #{$tablet}
   .sectionOne
     .groupCard
+      display: flex
+    .photosectionOne
+      position: relative
+      display: flex
+      justify-content: space-between
+    .active
+      .infoSectionOne
+        width: auto
+
+    .groupCard
       bottom: 20px
     .brendLineYellow
       .briefInfo
         padding-bottom: 15px
         max-width: 360px
 
-@keyframes photo
-  0%
-    transform: translateX(550px)
-    opacity: 0
-  100%
-    transform: translateX(0px)
-    opacity: 1
+@media #{$tabletPartial}
+  .sectionOne
+    .groupCard
+      display: flex
+
+
+    .photosectionOne
+      position: relative
+      display: flex
+      justify-content: space-between
+
+    .active
+      .infoSectionOne
+        width: auto
+    .groupCard
+      bottom: 20px
+    .brendLineYellow
+      .briefInfo
+        padding-bottom: 15px
+        max-width: 360px
+
+@media #{$xMedium}
+  .sectionOne
+    .brendLineYellow
+      padding: 0
+      justify-content: space-between
+      .briefInfo
+        // overflow: hidden
+        &:nth-child(1)
+          max-width: 203px
+        &:nth-child(2)
+          max-width: 270px
+        &:nth-child(3)
+          max-width: 286px
+        &:nth-child(4)
+          max-width: 235px
+
+
+
+

@@ -7,6 +7,7 @@ $font-size: 15px
   justify-content: space-around
   flex-flow: wrap
   padding-top: 38px
+  width: 100%
   .product
     position: relative
     display: block
@@ -88,11 +89,12 @@ $font-size: 15px
     .priceGroup
       display: flex
       position: absolute
-      bottom: 38px
-      opacity: 0
-      visibility: hidden
+      bottom: 65px
+      opacity: 1
+      visibility: visible
       letter-spacing: 1px
       left: 25px
+      align-items: center
 
       .newPrice
         color: #009110
@@ -117,14 +119,20 @@ $font-size: 15px
           background-color: grey
           position: absolute
 
+
 @media #{$medium}
   .products
-    justify-content: flex-start
+    justify-content: center
     .product
       margin: 0 20px 20px 0px
+      &:nth-child(4n)
+        margin-right: 0px
+      &:nth-child(5n)
+        margin-right: 20px
       .priceGroup
         visibility: visible
         opacity: 1
+        bottom: 38px
       .btnBuy
         visibility: hidden
         opacity: 0
@@ -138,3 +146,50 @@ $font-size: 15px
         .priceGroup
           opacity: 0
           visibility: hidden
+
+@media #{$xMedium}
+  .products
+    justify-content: flex-start
+    .product
+      margin: 0 20px 20px 0px
+      &:nth-child(4n)
+        margin-right: 20px
+      &:nth-child(5n)
+        margin-right: 0px
+      .priceGroup
+        visibility: visible
+        opacity: 1
+        bottom: 38px
+      .btnBuy
+        visibility: hidden
+        opacity: 0
+      &:hover
+        transform: scale(1.04)
+        .wrappImg
+          transform: scale(1.1)
+        .btnBuy
+          opacity: 1
+          visibility: visible
+        .priceGroup
+          opacity: 0
+          visibility: hidden
+
+@media #{$tablet}
+  .products
+    justify-content: flex-start
+    .product
+      margin: 0 20px 20px 0
+      &:nth-child(3n), &:nth-child(5n)
+        margin-right: 20px
+      &:nth-child(4n)
+        margin-right: 0
+
+@media #{$tabletPartial}
+  .products
+      justify-content: flex-start
+      .product
+        margin: 0 15px 20px 0
+        &:nth-child(5n)
+          margin-right: 15px
+        &:nth-child(3n)
+          margin-right: 0px

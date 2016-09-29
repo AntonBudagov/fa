@@ -49,10 +49,116 @@ mixin ulx2
 mixin menu
 
   nav.menu
-    //- .burger-menu
-    //-   .burger
+    //- Modal CallBack--------------------------
+    #modalMenu.modal
+      //- .modal-close.burger-menu.menu-on
+      //-   .burger
+      form.navbar-form-search(role='search')
+        input#search(type='text', placeholder='Введите название лекарства (поиск по 30 000 товарам)', name='search')
+        button.btn.btnSearch(type='submit')
+          .group-btn
+            i.icon.icon-search
+            span найти
+        .searchContent
+          .wrpappSearchContent
+            .title Товары
+            .scrollSeacrh(data-simplebar-direction="vertical")
+              a.nameSerch.linkDefault(href="#")
+                span Анальгин таблетки 500 мг, 10 шт.
+                span 1456.69 руб.
+              a.nameSerch.linkDefault(href="#")
+                span Анальгин таблетки 500 мг, 10 шт.
+                span 1456.69 руб.
+               a.nameSerch.linkDefault(href="#")
+                span Анальгин таблетки 500 мг, 10 шт.
+                span 1456.69 руб.
+               a.nameSerch.linkDefault(href="#")
+                span Анальгин таблетки 500 мг, 10 шт.
+                span 1456.69 руб.
+               a.nameSerch.linkDefault(href="#")
+                span Анальгин таблетки 500 мг, 10 шт.
+                span 1456.69 руб.
+            .title Статьи
+            .scrollSeacrh(data-simplebar-direction="vertical")
+               a.nameSerch.linkDefault(href="#")
+                span Название статьи бла бла бла
+               a.nameSerch.linkDefault(href="#")
+                span Название другой статьи бла бла бла бла
+        .searchContent
+          .wrpappSearchContent
+            .title Товары
+            .scrollSeacrh(data-simplebar-direction="vertical")
+              a.nameSerch.linkDefault(href="#")
+                span Анальгин таблетки 500 мг, 10 шт.
+                span 1456.69 руб.
+              a.nameSerch.linkDefault(href="#")
+                span Анальгин таблетки 500 мг, 10 шт.
+                span 1456.69 руб.
+               a.nameSerch.linkDefault(href="#")
+                span Анальгин таблетки 500 мг, 10 шт.
+                span 1456.69 руб.
+               a.nameSerch.linkDefault(href="#")
+                span Анальгин таблетки 500 мг, 10 шт.
+                span 1456.69 руб.
+               a.nameSerch.linkDefault(href="#")
+                span Анальгин таблетки 500 мг, 10 шт.
+                span 1456.69 руб.
+            .title Статьи
+            .scrollSeacrh(data-simplebar-direction="vertical")
+               a.nameSerch.linkDefault(href="#")
+                span Название статьи бла бла бла
+               a.nameSerch.linkDefault(href="#")
+                span Название другой статьи бла бла бла бла
+      #accordian
+        ul
+          li.dropDown
+            h3
+              a(href='#') Каталог товаров
+            ul
+              li
+                a(href='#') Лекарства и БАДы
+                +ul
+                //- +ul
+                //- +ul
 
-    #accordian
+              li
+                a(href='#') Гигиена
+                +ul
+
+              li
+                a(href='#') Мама и малыш
+                +ul
+
+              li
+                a(href='#') Мед.приборы и изделия
+
+              li
+                a(href='#') Спорт и фитнес
+
+              li
+                a(href='#') Косметика
+
+              li
+                a(href="#") Линзы
+          li
+            h3
+              a(href='#') О компании
+          li
+            h3
+              a(href='#') Поможем детям
+          li
+            h3
+              a(href='#') Арендодетелям
+          li
+            h3
+              a(href='#') Вакансии
+          li
+            h3
+              a(href='#') Новости
+          li
+            h3
+              a(href='#') Советы экспертов
+    //- #accordian
       ul
         li.dropDown
           h3
@@ -101,6 +207,7 @@ mixin menu
         li
           h3
             a(href='#') Советы экспертов
+
     .wrappContent.wrappMenu.flexB
       a.dropDown
         span Каталог товаров
@@ -140,3 +247,4 @@ mixin menu
       a.link(href="#") Вакансии
       a.link(href="#") Новости
       a.link(href="#") Советы экспертов
+

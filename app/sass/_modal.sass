@@ -47,6 +47,7 @@
     &.error-input
       border: 1px solid red
 
+// =============================================================================
 .modalCallBack, .forgotPwd
   padding: 20px
 
@@ -58,9 +59,9 @@
     line-height: 12px
     text-transform: uppercase
     border: 1px solid #0044a9
-
-
+// =============================================================================
 .modalLoginForm
+  z-index: 3334!important
   .modal-close
     .icon-cancel
       +sprite($cancel)
@@ -100,9 +101,6 @@
       position: relative
       opacity: 1
       visibility: visible
-
-
-      // visibility: visible
 
   input[type=submit]
     border: 1px solid #0044a9
@@ -154,7 +152,6 @@
 
 
   .btnGroup
-
     width: 90%
     height: 32px
     display: flex
@@ -213,8 +210,6 @@
       border-radius: 0;
       margin: 0;
       margin-right: 12px;
-
-
     .qw
       width: 15px
       height: 15px
@@ -225,6 +220,7 @@
       padding: 1px
       margin-left: 6px
       font-family: $brendFontBold
+
   .footerModal
     display: flex
     padding-top: 18px
@@ -247,12 +243,89 @@
     background-color: transparent
     border: 1px solid #0044a9
     padding: 0
+// modalMenu====================================================================
+
+#modalMenu
+  padding-top: 60px
+
+  .navbar-form-search
+    position: relative
+    max-width: 636px
+    width: 100%
+    display: flex
+    margin: 20px 0px 20px 0
+    padding: 0 20px
+    #search
+      padding-left: 11px
+      max-width: 543px
+      height: 32px
+      border-top: 1px solid #febe10
+      border-bottom: 1px solid #febe10
+      border-left: 1px solid #febe10
+
+  .searchContent
+    z-index: 112
+    display: none
+    position: absolute
+    max-width: 542px;
+    width: 100%
+    height: 275px
+    background-color: white;
+    box-shadow: 0 0 4px rgba(17, 16, 16, 0.1)
+    top: 36px
+    padding: 10px 9px
+    left: 0
+
+    .wrpappSearchContent
+      height: 100%
+      width: 100%
+    .scrollSeacrh
+      max-height: 134px
+      min-height: 44px
+      height: 100%
+      width: 100%
+    .title
+      width: 100%
+      border-bottom: solid 1px #44d654
+      color: #777
+      font-family: $defaultFont
+      font-size: 13px
+      font-weight: 600
+      line-height: 18px
+      padding-bottom: 2px
+    .nameSerch
+      display: flex
+      justify-content: space-between
+      width: 100%
+      padding-right: 0px
+      &:hover
+        span
+          color: #1f4ba5
+    .nameProduct, .priceProduct, span
+      color: #222
+      font-family: $defaultFont;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 18px;
+      margin-bottom: 3px;
+      letter-spacing: .5px;
+      margin-top: 10px;
+      text-align: left
+      &:first-child
+        margin-top: 10px
+
+
+
+    .priceProduct
+      text-align: right
+
 
 @media #{$medium}
   .modal
     min-height: auto
     h4
       padding-bottom: 15px
+// =============================================================================
   .modalCallBack
     max-width: 426px;
     max-height: 295px;
@@ -260,7 +333,7 @@
     background-color: #f6f6f6;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.35)
     padding: 33px 41px
-
+// =============================================================================
   .modalLoginForm
     width: 850px
     height: 482px
@@ -288,13 +361,11 @@
         padding: 60px 41px 20px 41px
 
       .infoGroup
-
         margin-bottom: 35px
 
         flex-direction: row
         .desc
           padding: 0 0 0 29px
-
 
       .footerModal
         justify-content: flex-start

@@ -19,8 +19,8 @@ $(document).click(function(){
 });
 
 $(".dropDownCity").click(function(e){
-  $(this).addClass('active');
-  $(".wrappDropDown").show();
+  $(this).toggleClass('active');
+  $(".wrappDropDown").toggle();
   e.stopPropagation();
 });
 // drodDownMenu
@@ -29,6 +29,7 @@ var overlay = $('.overlayDropDown');
   $('.wrappMenu .dropDown, .dropDownTopMenu').click(function(e){
     $(this).addClass('active');
     $('.catalogProductsMenu').show();
+    $('.catalogProductsMenu').height($(this).parent().find('.wrapp-ul').height());
     overlay.addClass('active');
 
   });
@@ -86,7 +87,7 @@ var overlay = $('.overlayDropDown');
   $('.modal-trigger').leanModal({
     starting_top: '10%',
   });
-  // $('#modal2').openModal();
+  // $('#modalMenu').openModal();
   // FormModla-----------------------------------------------------
   $('.loginBtnModal').click(function(e){
 
@@ -170,9 +171,19 @@ var overlay = $('.overlayDropDown');
   Acardion Menu
 --------------------------------------------------------------------------------
 */
-  // $(".burger-menu").click(function () {
-  //   $(this).toggleClass("menu-on");
-  // });
+
+  $(".burger-menu").click(function () {
+
+    if($(this).hasClass('menu-on')){
+      $(this).removeClass('menu-on');
+      $('#modalMenu').closeModal();
+    }else{
+      $(this).addClass('menu-on');
+      $('#modalMenu').openModal();
+    }
+  });
+
+
    $("#accordian a").click(function() {
     var link = $(this);
     var closest_ul = link.closest("ul");
@@ -210,6 +221,33 @@ var overlay = $('.overlayDropDown');
         closest_li.addClass("active");
     }
   });
+
+/*
+--------------------------------------------------------------------------------
+  baner
+--------------------------------------------------------------------------------
+*/
+  function resizeWindow(){
+    // console.log('resizeWindow work')
+    var large, meddium, viewWindow;
+    viewWindow = $( window ).width(); large = 1024; meddium = 768;
+    if (viewWindow >= large) {
+      $('.banerReclame').attr('src', 'images/upload/sectionOne/baner-1.jpg');
+      //console.log('Large: '+ viewWindow)
+    }else if(viewWindow >= meddium){
+     // console.log('meddium: '+ viewWindow)
+      $('.banerReclame').attr('src', 'images/upload/sectionOne/baner_tablet.jpg');
+    }else{
+      //console.log('small: '+ viewWindow)
+      $('.banerReclame').attr('src', 'images/upload/sectionOne/baner_mobile.jpg');
+    }
+  };
+  resizeWindow();
+    $( window ).resize(function() {
+
+      // resizeWindow();
+
+    });
 
 /*
 --------------------------------------------------------------------------------

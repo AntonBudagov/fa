@@ -2,10 +2,14 @@
 
   .top
     min-height: 60px
-    background-color: #777
+    background-color: #fff
     width: 100%
     display: flex
-    align-items: center
+    // align-items: center
+    align-items: flex-start
+    position: fixed
+    z-index: 3333
+    box-shadow: 0px 2px 3.4px 0.6px rgba(154, 154, 154, 0.22)
     a
       color: #fff
       text-decoration: none
@@ -15,6 +19,7 @@
     .linkTop
       display: none
     .flexB
+      display: none
       justify-content: space-between
       position: relative
     .leftTop
@@ -83,6 +88,12 @@
         display: block
         letter-spacing: 0
 
+  .logo
+    position: fixed
+    top: 0
+    z-index: 3333
+    width: 154px
+    padding-top: 4px
 
   .middle
     min-height: 98px
@@ -91,6 +102,7 @@
     width: 100%
     display: flex
     z-index: 111
+    padding-top: 60px
     .dropDownTopMenu
       position: relative;
       cursor: pointer;
@@ -130,6 +142,7 @@
       width: 100%
       display: flex
       margin: 20px 0px 20px 0
+      display: none
       #search
         flex: 1 280px
         padding-left: 11px
@@ -180,6 +193,9 @@
       justify-content: space-between
       width: 100%
       padding-right: 0px
+      &:hover
+        span
+          color: #1f4ba5
     .nameProduct, .priceProduct, span
       color: #222
       font-family: $defaultFont;
@@ -192,8 +208,7 @@
       text-align: left
       &:first-child
         margin-top: 10px
-      &:hover
-        color: #1f4ba5
+
 
 
     .priceProduct
@@ -217,11 +232,19 @@
     .top
       .linkTop
         display: inline
-@media #{$medium}
+@media #{$xMedium}
   .header
     .top
       min-height: 32px
+      background-color: #777
       height: 32px
+      position: relative
+      align-items: center
+      box-shadow: 0px 2px 3.4px 0.6px transparent
+      .burger-menu
+        display: none
+      .flexB
+        display: flex
       .leftTop
         width: 50%
         max-width: 345px
@@ -247,8 +270,11 @@
 
 
     .middle
+      padding-top: 0
       .logo
+        position: relative
         margin-right: 62px
+        z-index: 1
       .flexB
         padding: 21px 20px 7px
         justify-content: flex-start
@@ -257,6 +283,7 @@
         margin-right: 89px
         margin-bottom: 0
         margin-top: 0
+        display: flex
 
       .btnCart
         margin: 0
@@ -269,9 +296,6 @@
         .dropDownTopMenu
           display: flex
 
-
-
-
         .flexB
           padding: 5px 20px
           justify-content: space-between
@@ -282,6 +306,4 @@
           margin-right: 50px
         .loginBtn
           display: none
-
-
 
