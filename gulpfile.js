@@ -101,7 +101,7 @@ gulp.task('svg', function() {
     templates: {
       scss: true
     },
-    cssFile: "../../../app/sass/_sprite.scss"
+    cssFile: "../app/sass/_sprite.scss"
   };
   return gulp.src('app/svg/**/*.svg')
     .pipe(svgSprite(options))
@@ -174,6 +174,9 @@ gulp.task('bower', function() {
       },
       "paginationjs":{
         main: ["./**/*.min.js", "./**/*.css"]
+      },
+      "perfect-scrollbar":{
+         main: ["./**/*.min.js", "./**/*.min.css"]
       }
     }
   })).pipe(gulp.dest('dist/lib'));

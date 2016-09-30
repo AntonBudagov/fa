@@ -9,12 +9,11 @@
 // drodDownCity
 $(document).click(function(){
 
-  $(".wrappDropDown").hide();
-  // $('.catalogProductsMenu').hide();
-  $('.smallPopupCart').hide();
-
-  if ($('.dropDownCity, .wrappMenu .dropDown').hasClass('active')){
-    $('.dropDownCity, .wrappMenu .dropDown').removeClass('active');
+  if ($('.dropDownCity').hasClass('active')){
+    $(".wrappDropDown").hide();
+    $('.dropDownCity').removeClass('active');
+  }else{
+    return;
   }
 });
 
@@ -24,33 +23,39 @@ $(".dropDownCity").click(function(e){
   e.stopPropagation();
 });
 // drodDownMenu
-var overlay = $('.overlayDropDown');
-
+// var overlay = $('.overlayDropDown');
+var catalogProductsMenu = false;
   $('.wrappMenu .dropDown, .dropDownTopMenu').click(function(e){
-    $(this).addClass('active');
-    $('.catalogProductsMenu').show();
-    $('.catalogProductsMenu').height($(this).parent().find('.wrapp-ul').height());
-    overlay.addClass('active');
+
+    $(this).toggleClass('active');
+    $('.catalogProductsMenu').toggle();
+    $('.catalogProductsMenu').height($('.has-class .wrapp-ul').eq(0).height());
+    // overlay.addClass('active');
+    catalogProductsMenu = true;
+    e.stopPropagation();
+    });
+     $('.has-sub').hover(function(e){
+
+        $('.has-sub').removeClass('active');
+        $(this).addClass('active');
+        $('.wrapp-ul').removeClass('active')
+        $(this).find('.wrapp-ul').addClass('active')
+        $('.catalogProductsMenu').height($(this).find('.wrapp-ul').height());
+
+        console.log($(this).find('.wrapp-ul').height())
+
+    })
+  // drodDownMenu close
+  $(document).click( function(e){
+
+    if($(e.target).closest('.catalogProductsMenu').length == 0){
+      $('.catalogProductsMenu').hide();
+      catalogProductsMenu = false;
+    }else{
+      return;
+    }
 
   });
-   $('.has-sub').hover(function(e){
-
-      $('.has-sub').removeClass('active');
-      $(this).addClass('active');
-      $('.wrapp-ul').removeClass('active')
-      $(this).find('.wrapp-ul').addClass('active')
-      $('.catalogProductsMenu').height($(this).find('.wrapp-ul').height());
-
-      console.log($(this).find('.wrapp-ul').height())
-
-   })
-
-  overlay.click(function(){
-
-    $(this).removeClass('active')
-    $('.catalogProductsMenu').hide()
-
-    });
 
   // ----------
   $('.contentDropDown a').click(function(){
@@ -62,12 +67,21 @@ var overlay = $('.overlayDropDown');
 
   // Cart ---------------------------------------------------------
 
-
+  var smallPopupCart = false;
   $('.btnBuy').click(function(e){
-
-    $('.smallPopupCart').fadeIn(300);
+    smallPopupCart = true;
+    $('.smallPopupCart').show();
     e.stopPropagation();
+  });
 
+  $(document).click( function(e){
+
+    if($(e.target).closest('.smallPopupCart').length == 0){
+      $('.smallPopupCart').hide();
+      smallPopupCart = false;
+    }else{
+      return;
+    }
   });
 
   // searchLetter---------------------------------------------------------------
@@ -133,19 +147,33 @@ var overlay = $('.overlayDropDown');
 --------------------------------------------------------------------------------
 */
   // mini Cart
-  $('#wrappScroll').simplebar();
+  // $('.wrappSmallPopupCartScrool').simplebar();
+  var el = document.querySelector('.wrappSmallPopupCartScrool');
+  var serchScroll = document.querySelector('.scrollSeacrh');
+  Ps.initialize(el);
+  Ps.initialize(serchScroll);
+
   // search-------------------------------------------------------------------
-  $('.scrollSeacrh').simplebar();
-
-  $('#search').keyup(function(){
-
-    if($('#search').val().length >= 1){
+  // $('.scrollSeacrh').simplebar();
+    var isOpenSeacrh = false;
+    $('.navbar-form-search').keyup(function(){
+      if($(this).find('.search').val().length >= 1){
+        isOpenSeacrh = true;
+        console.log(isOpenSeacrh)
         $('.searchContent').fadeIn(300);
-    }else{
-      $('.searchContent').fadeOut(300);
-    }
+        if(isOpenSeacrh){
+            $(document).click(function(){
+              $('.searchContent').fadeOut(300);
+            });
+          }
+      }else{
+        $('.searchContent').fadeOut(300);
+        isOpenSeacrh = false;
+        console.log(isOpenSeacrh)
+      }
 
-  });
+    });
+
 
 // Fix Menu-----------------------------------------------------------------------
   $(window).scroll(function (event) {
@@ -160,12 +188,6 @@ var overlay = $('.overlayDropDown');
 
   });
 
-
-// cart Delete
-  // $('.delete').click(function(){
-
-  //   $(this).parent().html('');
-  // })
 /*
 --------------------------------------------------------------------------------
   Acardion Menu
@@ -182,7 +204,6 @@ var overlay = $('.overlayDropDown');
       $('#modalMenu').openModal();
     }
   });
-
 
    $("#accordian a").click(function() {
     var link = $(this);
@@ -254,32 +275,32 @@ var overlay = $('.overlayDropDown');
   pagination
 --------------------------------------------------------------------------------
 */
-  function simpleTemplating(data) {
-      var html = '<ul>';
-      $.each(data, function(index, item){
-          html += '<li>'+ item +'</li>';
-      });
-      html += '</ul>';
-      return html;
-  }
+  // function simpleTemplating(data) {
+  //     var html = '<ul>';
+  //     $.each(data, function(index, item){
+  //         html += '<li>'+ item +'</li>';
+  //     });
+  //     html += '</ul>';
+  //     return html;
+  // }
     // var sources = function () {
 
     // }();
-//   $('#pagination-container').pagination({
-//     dataSource: (function(){
-//       var result = [];
-//       for (var i = 1; i < 196; i++) {
-//           result.push(i);
-//       }
-//       return result;
-//     })(),
-//     prevText: '<< назад ',
-//     nextText: ' вперед >>',
-//     pageSize: 1,
-//     callback: function(data, pagination) {
-//         var html = simpleTemplating(data);
-//         $('#data-container').html(html);
-//     }
-// })
+  //   $('#pagination-container').pagination({
+  //     dataSource: (function(){
+  //       var result = [];
+  //       for (var i = 1; i < 196; i++) {
+  //           result.push(i);
+  //       }
+  //       return result;
+  //     })(),
+  //     prevText: '<< назад ',
+  //     nextText: ' вперед >>',
+  //     pageSize: 1,
+  //     callback: function(data, pagination) {
+  //         var html = simpleTemplating(data);
+  //         $('#data-container').html(html);
+  //     }
+  // })
 
 })(window);

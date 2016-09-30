@@ -7,9 +7,9 @@ mixin header
       .wrappContent.flexB
         .leftTop
           a.dropDownCity#dropDownCity
-            .icon.icon-pin
+            .icon.icon-pin.pin
             | Воронеж
-            i.icon.icon-arrow-dwon
+            i.icon.icon-arrow-dwon.arrow-dwon
           .wrappDropDown
             h5 Выберите ваш город
             .contentDropDown
@@ -51,11 +51,11 @@ mixin header
 
         a.logo(href="#")
           img(src="images/logo.jpg", alt="Фармия")
-        .dropDown.dropDownTopMenu
+        .dropDown.dropDownTopMenu.categoryDropDown
           span Каталог товаров
           i.iocn.icon-arrow-down-black
         form.navbar-form-search(role='search')
-          input#search(type='text', placeholder='Введите название лекарства (поиск по 30 000 товарам)', name='search')
+          input.search(type='text', placeholder='Введите название лекарства (поиск по 30 000 товарам)', name='search')
           button.btn.btnSearch(type='submit')
             .group-btn
               i.icon.icon-search
@@ -63,28 +63,28 @@ mixin header
           .searchContent
             .wrpappSearchContent
               .title Товары
-              .scrollSeacrh(data-simplebar-direction="vertical")
+              .scrollSeacrh.scrollSeacrhProduct
+                a.nameSerch.linkDefault(href="#")
+                  span Анальгин таблетки 500 мг, 10 шт. Анальгин таблетки 500 мг, 10 шт.
+                  span 1456.69 руб.
                 a.nameSerch.linkDefault(href="#")
                   span Анальгин таблетки 500 мг, 10 шт.
                   span 1456.69 руб.
                 a.nameSerch.linkDefault(href="#")
                   span Анальгин таблетки 500 мг, 10 шт.
                   span 1456.69 руб.
-                 a.nameSerch.linkDefault(href="#")
+                a.nameSerch.linkDefault(href="#")
                   span Анальгин таблетки 500 мг, 10 шт.
                   span 1456.69 руб.
-                 a.nameSerch.linkDefault(href="#")
-                  span Анальгин таблетки 500 мг, 10 шт.
-                  span 1456.69 руб.
-                 a.nameSerch.linkDefault(href="#")
+                a.nameSerch.linkDefault(href="#")
                   span Анальгин таблетки 500 мг, 10 шт.
                   span 1456.69 руб.
               .title Статьи
-              .scrollSeacrh(data-simplebar-direction="vertical")
+              .scrollSeacrh.scrollSeacrhPost
                  a.nameSerch.linkDefault(href="#")
                   span Название статьи бла бла бла
                  a.nameSerch.linkDefault(href="#")
-                  span Название другой статьи бла бла бла бла
+                  span Название другой статьи бла бла бла бла бла бла бла бла бла бла бла бла
 
 
         .btn.loginBtn.modal-trigger(href="#modal2") войти
@@ -94,7 +94,7 @@ mixin header
             span корзина
             //- Small Scroll
           .smallPopupCartScrool
-            #wrappScroll(data-simplebar-direction="vertical")
+            .wrappSmallPopupCartScrool
               .contentSmallPopupCart
                 .wrappSmallPopupCart
                   .wrappImg
@@ -131,6 +131,7 @@ mixin header
                     span.price 192 руб.
                   .delete
                     i.icon.icon-close
+
             .footerSmallPopupCartScrool
               a.btn.catBtn(href="#") перейти в корзину
               a.btn.checkoutBtn(href="#") Оформить заказ
@@ -147,9 +148,6 @@ mixin header
                 span.name Синафлан линимент 0,025%
                 span.price 192 руб.
           a.linkSmallPopupCart(href="#") посмотреть корзину
-
-
-
 
     .bottom
       +menu

@@ -10,6 +10,7 @@
     pagination: false,
     addClassActive: true,
     autoHeight: true,
+    autoPlay: 5000,
     afterAction : syncPosition,
     responsiveRefreshRate : 200
     // afterAction : function (elem) {
@@ -90,7 +91,7 @@
       slideSpeed : 300,
       paginationSpeed : 400,
       singleItem: true,
-      autoPlay: true
+      autoPlay: 5000
     };
 
   $('.sliderReclama').owlCarousel(sliderReclama);

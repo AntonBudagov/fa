@@ -20,8 +20,6 @@
     margin: auto
     bottom: 0
     top: 0
-    img
-      // max-width: none
 
   .infoSectionOne
     transform: translateX(550px)
@@ -92,7 +90,7 @@
     bottom: 20px
     padding-bottom: 0
     .owl-item
-      height: 153px
+      height: 155px
     .card
       display: flex
       max-width: 320px;
@@ -100,10 +98,10 @@
       height: 125px;
       background-color: white;
       border-radius: 2px;
-      box-shadow: -6.6px 6.1px 24px rgba(64, 63, 68, 0.52)
+      box-shadow: -6.6px 6.1px 18px rgba(64, 63, 68, 0.52)
       padding: 5px 13px 2px
       cursor: pointer
-      margin: 8px auto 10px
+      margin: 10px auto 10px
 
       .wrappImg
         margin-right: 24px
@@ -155,12 +153,16 @@
       max-width: 310px
       width: 100%
       .icon-plus
+        display: table
         +sprite($plus)
       .icon-clock-2
+        display: table
         +sprite($clock-2)
       .icon-sert
+        display: table
         +sprite($sert)
       .icon-medical
+        display: table
         +sprite($medical)
 
       span
@@ -169,6 +171,24 @@
         font-size: 17px
         font-weight: 400
         margin-left: 22px
+
+@media #{$xSmall}
+  .sectionOne
+    .groupCard
+      display: none
+    .photosectionOne
+      position: relative
+      display: flex
+      justify-content: space-between
+    .active
+      .infoSectionOne
+        width: auto
+
+    .groupCard
+      bottom: 20px
+    .brendLineYellow
+      .briefInfo
+        padding-bottom: 15px
 
 
 @media #{$medium}
@@ -200,32 +220,25 @@
       position: absolute
       flex-direction: row
       display: flex
-      bottom: 104px
+      bottom: 140px
       // padding-bottom: 39px
 
     .brendLineYellow
 
       .briefInfo
-        padding: 0
+        // padding-bottom; 15px
+        max-width: 25%
+
 
 @media #{$tablet}
   .sectionOne
     .groupCard
       display: flex
-    .photosectionOne
-      position: relative
-      display: flex
-      justify-content: space-between
-    .active
-      .infoSectionOne
-        width: auto
 
-    .groupCard
-      bottom: 20px
     .brendLineYellow
       .briefInfo
         padding-bottom: 15px
-        max-width: 360px
+        max-width: 25%
 
 @media #{$tabletPartial}
   .sectionOne
@@ -250,10 +263,13 @@
 
 @media #{$xMedium}
   .sectionOne
+    .groupCard
+      bottom: 104px
     .brendLineYellow
       padding: 0
       justify-content: space-between
       .briefInfo
+        padding-bottom: 0
         // overflow: hidden
         &:nth-child(1)
           max-width: 203px
@@ -263,6 +279,7 @@
           max-width: 286px
         &:nth-child(4)
           max-width: 235px
+
 
 
 

@@ -54,15 +54,15 @@ mixin menu
       //- .modal-close.burger-menu.menu-on
       //-   .burger
       form.navbar-form-search(role='search')
-        input#search(type='text', placeholder='Введите название лекарства (поиск по 30 000 товарам)', name='search')
+        input.search(type='text', placeholder='Введите название лекарства (поиск по 30 000 товарам)', name='search')
         button.btn.btnSearch(type='submit')
           .group-btn
-            i.icon.icon-search
+            i.icon.icon-search.search-icon
             span найти
         .searchContent
           .wrpappSearchContent
             .title Товары
-            .scrollSeacrh(data-simplebar-direction="vertical")
+            .scrollSeacrh
               a.nameSerch.linkDefault(href="#")
                 span Анальгин таблетки 500 мг, 10 шт.
                 span 1456.69 руб.
@@ -79,7 +79,7 @@ mixin menu
                 span Анальгин таблетки 500 мг, 10 шт.
                 span 1456.69 руб.
             .title Статьи
-            .scrollSeacrh(data-simplebar-direction="vertical")
+            .scrollSeacrh
                a.nameSerch.linkDefault(href="#")
                 span Название статьи бла бла бла
                a.nameSerch.linkDefault(href="#")
@@ -87,7 +87,7 @@ mixin menu
         .searchContent
           .wrpappSearchContent
             .title Товары
-            .scrollSeacrh(data-simplebar-direction="vertical")
+            .scrollSeacrh
               a.nameSerch.linkDefault(href="#")
                 span Анальгин таблетки 500 мг, 10 шт.
                 span 1456.69 руб.
@@ -118,8 +118,6 @@ mixin menu
               li
                 a(href='#') Лекарства и БАДы
                 +ul
-                //- +ul
-                //- +ul
 
               li
                 a(href='#') Гигиена
@@ -158,6 +156,48 @@ mixin menu
           li
             h3
               a(href='#') Советы экспертов
+      .bottomModal.wrappContent.flexB
+        .leftTop
+          a.dropDownCity#dropDownCity
+            .icon.pin
+            //- .icon.icon-pin
+            | Воронеж
+            i.icon.icon-arrow-dwon.arrow-dwon
+          .wrappDropDown
+            h5 Выберите ваш город
+            .contentDropDown
+              .group
+                a(href="#") Москва
+                a(href="#") Санкт-Петербург
+                a(href="#") Брянск
+                a(href="#") Владивосток
+                a(href="#") Владимир
+                a(href="#") Волгоград
+                a(href="#") Вологда
+                a.active(href="#") Воронеж
+              .group
+                a(href="#") Москва
+                a(href="#") Санкт-Петербург
+                a(href="#") Брянск
+                a(href="#") Владивосток
+                a(href="#") Владимир
+                a(href="#") Волгоград
+                a(href="#") Вологда
+                a(href="#") Воронеж
+              .group
+                a(href="#") Москва
+                a(href="#") Санкт-Петербург
+                a(href="#") Брянск
+                a(href="#") Владивосток
+                a(href="#") Владимир
+                a(href="#") Волгоград
+                a(href="#") Вологда
+                a(href="#") Воронеж
+          a.linkTop(href="#") Самовывоз
+          a.linkTop(href="#") Доставка
+        .rightTop
+          a.phone(href="tel:88007654556") 8 (800) 765 45 56
+          a.link.modal-trigger(href="#modal1") Заказать звонок
     //- #accordian
       ul
         li.dropDown
@@ -209,7 +249,7 @@ mixin menu
             a(href='#') Советы экспертов
 
     .wrappContent.wrappMenu.flexB
-      a.dropDown
+      a.dropDown.categoryDropDown
         span Каталог товаров
         i.iocn.icon-arrow-down-black
       .catalogProductsMenu

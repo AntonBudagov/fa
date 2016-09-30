@@ -246,23 +246,18 @@ svg
     display: block
 
 
-.overlayDropDown
-  position: fixed
-  display: none
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  background-color: transparent
-  z-index: 111
-  // opacity: 0
-  &.active
-    display: block
-
-.simplebar-track
-  background-color: #fff
-.simplebar-scroll-content
-  width: 100%!important
+// .overlayDropDown
+//   position: fixed
+//   display: none
+//   top: 0
+//   left: 0
+//   width: 100%
+//   height: 100%
+//   background-color: transparent
+//   z-index: 111
+//   // opacity: 0
+//   &.active
+//     display: block
 
 @keyframes photo
   0%
@@ -273,9 +268,8 @@ svg
     opacity: 1
 
 @import _spritePng
-//fix hove
-// @import vendors/_mixin
-// @import _sprite
+
+@import _sprite
 @import _header
 @import _menu
 
@@ -298,6 +292,7 @@ svg
 
 
 @import indexTwo
+
 .icon
   position: relative
   &:before

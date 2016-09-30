@@ -48,6 +48,12 @@
       border: 1px solid red
 
 // =============================================================================
+.modalCallBack
+  width: 100%
+  max-width: 426px;
+  max-height: 295px;
+  min-height: auto
+  top: 30%!important
 .modalCallBack, .forgotPwd
   padding: 20px
 
@@ -227,8 +233,9 @@
     justify-content: space-between
     .btn
       width: 120px
-      margin-right: 20px
+
   .infoText
+    width: 200px
     p, a
       font-family: $defaultFont
       font-size: 12px
@@ -248,6 +255,29 @@
 #modalMenu
   padding-top: 60px
 
+  .bottomModal
+    margin: 0px auto 0
+    // text-align: center
+    align-items: center
+    position: relative
+    background-color: #777
+    justify-content: flex-start
+    .leftTop
+      flex: 1 345px
+      margin: 20px 0 0
+      .linkTop
+        display: block
+        &:last-child
+          margin-right: 0
+    .rightTop
+      flex: 1 auto
+      text-align: left
+      margin: 20px 0 0
+      width: auto
+      .link
+        margin-top: 5px
+        display: inline-block
+
   .navbar-form-search
     position: relative
     max-width: 636px
@@ -255,13 +285,17 @@
     display: flex
     margin: 20px 0px 20px 0
     padding: 0 20px
-    #search
+    .search
       padding-left: 11px
       max-width: 543px
       height: 32px
       border-top: 1px solid #febe10
       border-bottom: 1px solid #febe10
       border-left: 1px solid #febe10
+      border-top-left-radius: 4px
+      border-bottom-left-radius: 4px
+      border-top-right-radius: 0px
+      border-bottom-right-radius: 0px
 
   .searchContent
     z-index: 112
@@ -314,18 +348,24 @@
       &:first-child
         margin-top: 10px
 
-
-
     .priceProduct
       text-align: right
 
 
+@media #{$xSmall}
+  #modalMenu
+    .bottomModal
+      .leftTop
+        margin: 0
+      .rightTop
+        margin: 0
+        text-align: right
 @media #{$medium}
   .modal
     min-height: auto
     h4
       padding-bottom: 15px
-// =============================================================================
+  // =============================================================================
   .modalCallBack
     max-width: 426px;
     max-height: 295px;
@@ -333,7 +373,7 @@
     background-color: #f6f6f6;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.35)
     padding: 33px 41px
-// =============================================================================
+  // =============================================================================
   .modalLoginForm
     width: 850px
     height: 482px
@@ -369,6 +409,8 @@
 
       .footerModal
         justify-content: flex-start
+        .btn
+          margin-right: 20px
 
       .rightModalContent
         padding: 15px 0 0 25px
